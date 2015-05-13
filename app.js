@@ -10,27 +10,27 @@ var menu = function() {
 };
 
 var panel = function() {
-  $(".open").on("click", function() {
-    $(".left-panel").animate({opacity: '+=1'}, 'slow');
-    $(".open").animate({opacity: '-=1'}, 'slow');
-  });
-  $(".button-close").on("click", function() {
-    $(".left-panel").animate({opacity: '-=1'}, 'slow');
-    $(".open").animate({opacity: '+=1'}, 'slow');
-  });
+    $(".open").on("click", function() {
+        $(".left-panel").animate({opacity: '+=1'}, 'slow');
+        $(".open").animate({opacity: '-=1'}, 'slow');
+    });
+    $(".button-close").on("click", function() {
+        $(".left-panel").animate({opacity: '-=1'}, 'slow');
+        $(".open").animate({opacity: '+=1'}, 'slow');
+    });
 };
 
 var addInput = function() {
-        $('.add-ingredient').click(function(){
-            $('form').append('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
-            return(false);
-        });
+    $('.add-ingredient').click(function() {
+        $('form').append('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
+        return(false);
+    });
 };
 
-var removeInput = function(){
-    $('.remove-ingredient').click(function(){
+var removeInput = function() {
+    $('.remove-ingredient').click(function() {
         var inputs = $('input');
-        if(inputs.length > 1) {
+        if (inputs.length > 1) {
             inputs.last().remove();
         }
     });
@@ -39,24 +39,36 @@ var removeInput = function(){
 var slideShow = function() {
 }
 
-var downloadBook = function(){
-    $('.download-book').click(function(){
+var downloadBook = function() {
+    $('.download-book').click(function() {
         $.ajax({
             type: 'GET',
-            url: 'book.txt',
-             success: function(data){
-                 console.log(data);
-             }
+            url: 'skladniki.php',
+            success: function(data) {
+                console.log(data);
+            },
+            error: function(data) {
+                alert('B³¹d')
+            }
         });
     });
 };
-               
-               
-$(function(){
+
+var autoComplete = function() {
+
+    $(".ingredient").autocomplete({
+        source: "ingredient.php",
+        minLength: 1
+    });
+};
+
+
+$(function() {
     menu();
     panel();
     addInput();
     removeInput();
     slideShow();
     downloadBook();
+    autoComplete();
 });
