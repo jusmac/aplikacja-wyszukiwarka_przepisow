@@ -25,6 +25,9 @@
                 minLength: 1
             });
         </script>
+        <script>$(function() {
+    $( ".add-recipe" ).resizable();
+  });</script>
 
     </head>
     <body>
@@ -84,47 +87,32 @@
             </button>
         </div>
 
-
-
-        <div class="accordion-caption">
-            <h3>Ciekawe przepisy</h3>
+        <div class="add_caption">
+            <h3>
+                Dodaj przepis
+            </h3>   
         </div>
-        <div class="accordion">
-            <h3>Przepis 1</h3>
-            <div>
-                <img class='slide-img' src="images/1.jpg" alt='bg'/>
-                <div class="slide-caption"><p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra
-                        leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p></div>
+        <div class="add_container">      
+            <div class="add_name"><input class="add_recipe_name" type="text" placeholder="nazwa"> 
             </div>
-            <h3>Przepis 2</h3>
-            <div>
-                <img class='slide-img' src="images/2.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
-                    Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, 
-                    faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-                </div>
+            <div class="add-ingredient-recipe">
+                <button class="btn btn-success btn-sm btn-block">
+                    <b>Dodaj składnik</b>
+                </button>
             </div>
-            <h3>Przepis 3</h3>
-            <div>
-                <img class='slide-img' src="images/3.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac 
-                    tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, 
-                    quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-                </div>
-            </div>
-            <h3>Przepis 4</h3>
-            <div>
-                <img class='slide-img' src="images/4.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                    Phasellus pellentesque purus in massa. Aenean in pede. </p>
-                </div>
+            <div class="remove-ingredient-recipe">
+                <button class="btn btn-warning btn-sm btn-block">
+                    <b>Usuń składnik</b>
+                </button> 
+            </div>                
+            <form>
+                <input class="add" type="search" placeholder="skladnik"> 
+            </form>
+            
+            <div class="add-making">
+                <input class="add-recipe" type="text" placeholder="opis wykonania">
             </div>
         </div>
-
 
 
 

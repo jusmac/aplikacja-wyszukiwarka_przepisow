@@ -22,22 +22,35 @@ var panel = function() {
 
 var addInput = function() {
     $('.add-ingredient').click(function() {
-        $('form').append('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
+        $('.left-panel').append('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
         return(false);
     });
 };
 
 var removeInput = function() {
     $('.remove-ingredient').click(function() {
-        var inputs = $('input');
+        var inputs = $('.ingredient');
         if (inputs.length > 1) {
             inputs.last().remove();
         }
     });
 };
 
-var slideShow = function() {
-}
+var addInputRecipe = function() {
+    $('.add-ingredient-recipe').click(function() {
+        $('.add_container').append('<input class="add" type="text" placeholder="dodaj skladnik">');
+        return(false);
+    });
+};
+
+var removeInputRecipe = function() {
+    $('.remove-ingredient-recipe').click(function() {
+        var inputs = $('.add');
+        if (inputs.length > 1) {
+            inputs.last().remove();
+        }
+    });
+};
 
 var downloadBook = function() {
     $('.download-book').click(function() {
@@ -54,13 +67,6 @@ var downloadBook = function() {
     });
 };
 
-var autoComplete = function() {
-
-    $(".ingredient").autocomplete({
-        source: "ingredient.php",
-        minLength: 1
-    });
-};
 
 
 $(function() {
@@ -68,7 +74,7 @@ $(function() {
     panel();
     addInput();
     removeInput();
-    slideShow();
     downloadBook();
-    autoComplete();
+    addInputRecipe();
+    removeInputRecipe();
 });
