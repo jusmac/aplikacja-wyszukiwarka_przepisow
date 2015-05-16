@@ -67,7 +67,30 @@ var downloadBook = function() {
     });
 };
 
-
+var sendRecipe = function() {
+    $('.send-recipe').click(function() {
+        var ingredients = [];
+        var inputs = $('.add');
+        for (i = 0; i < inputs.length; i++) {
+            ingredients.push(
+                    $(inputs[i]).val()
+                    );
+        }
+        recipe = {
+            description: $('.add-recipe').val(),
+            ingredients: ingredients,
+            name: $('.add_recipe_name').val(),
+        };
+        $.ajax({
+            type: 'POST',
+            url: 'new-recipe.php',
+            data: recipe,
+            success: function(data) {
+                console.log(data);
+            },
+        });
+    });
+};
 
 $(function() {
     menu();
@@ -77,4 +100,5 @@ $(function() {
     downloadBook();
     addInputRecipe();
     removeInputRecipe();
+    sendRecipe();
 });
