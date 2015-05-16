@@ -22,7 +22,7 @@ var panel = function() {
 
 var addInput = function() {
     $('.add-ingredient').click(function() {
-        $('.left-panel').append('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
+        $('.ingredient.first').after('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
         return(false);
     });
 };
@@ -38,7 +38,7 @@ var removeInput = function() {
 
 var addInputRecipe = function() {
     $('.add-ingredient-recipe').click(function() {
-        $('.add_container').append('<input class="add" type="text" placeholder="dodaj skladnik">');
+        $('.add.first').after('<input class="add" type="text" placeholder="skladnik">');
         return(false);
     });
 };
