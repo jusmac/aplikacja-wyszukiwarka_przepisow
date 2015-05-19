@@ -50,14 +50,14 @@ var removeInputRecipe = function() {
         var inputs = $('.add');
         if (inputs.length > 1) {
             inputs.last().remove();
-            var inputs = $('.add-quantity');
         }
         ;
+        var inputs = $('.add-quantity');
         if (inputs.length > 1) {
             inputs.last().remove();
-            var inputs = $('.add-unit');
         }
         ;
+        var inputs = $('.add-unit');
         if (inputs.length > 1) {
             inputs.last().remove();
         }
