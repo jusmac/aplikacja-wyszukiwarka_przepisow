@@ -39,6 +39,8 @@ var removeInput = function() {
 var addInputRecipe = function() {
     $('.add-ingredient-recipe').click(function() {
         $('.add.first').after('<input class="add" type="text" placeholder="skladnik">');
+        $('.add-quantity.first').after('<input class="add-quantity" type="number"  min="1" placeholder="ilosc">');
+        $('.add-unit.first').after('<select class="add-unit"></select>');
         return(false);
     });
 };
@@ -48,9 +50,21 @@ var removeInputRecipe = function() {
         var inputs = $('.add');
         if (inputs.length > 1) {
             inputs.last().remove();
+            var inputs = $('.add-quantity');
         }
+        ;
+        if (inputs.length > 1) {
+            inputs.last().remove();
+            var inputs = $('.add-unit');
+        }
+        ;
+        if (inputs.length > 1) {
+            inputs.last().remove();
+        }
+        ;
     });
 };
+
 
 var downloadBook = function() {
     $('.download-book').click(function() {

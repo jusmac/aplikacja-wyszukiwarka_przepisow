@@ -87,7 +87,7 @@
         <div class="bazylia">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
-        
+
         <div class="add_caption">
             <b class='add-caption-p'>
                 Dodaj przepis
@@ -106,8 +106,22 @@
                     <b>Usuń składnik</b>
                 </button> 
             </div>                
-            <form>
-                <input class="add first" type="search" placeholder="skladnik"> 
+            <form class='add-new-ingredient'>
+                <div class='col-lg-6'>
+                    <input class="add first" type="search" placeholder="skladnik"> 
+                </div>
+                <div class='col-lg-3'>
+                    <input class='add-quantity first' type='number'  min='1' placeholder='ilosc'>
+                </div>
+                <div class='col-lg-3'>
+                    <select class="add-unit first">
+                        <option>gramy</option>
+                        <option>szklanki</option>
+                        <option>łyżeczki</option>
+                        <option>dkg</option>
+                        <option>litry</option>
+                    </select>
+                </div> 
             </form>
 
             <div class="add-making">
