@@ -26,12 +26,18 @@
             });
         </script>
         <script>$(function() {
-    $( ".add-recipe" ).resizable();
-  });</script>
+                $(".add-recipe").resizable();
+            });</script>
 
     </head>
     <body>
-         <div class="menu-container">
+        <div class="bazylia2">
+            <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
+        </div>
+        <div class="menu-container">
+            <div class='banner'>
+                <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b></h4>
+            </div>
             <ul class="menu">
                 <li class="col-lg-2"><a href="index.html">Strona główna</a></li>>
                 <li class="col-lg-2"><a href="add.html">Dodaj przepis</a></li>
@@ -78,10 +84,14 @@
             </button>
         </div>
 
+        <div class="bazylia">
+            <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
+        </div>
+        
         <div class="add_caption">
-            <h3>
+            <b class='add-caption-p'>
                 Dodaj przepis
-            </h3>   
+            </b>   
         </div>
         <div class="add_container">      
             <div class="add_name"><input class="add_recipe_name" type="text" placeholder="nazwa"> 
@@ -99,13 +109,13 @@
             <form>
                 <input class="add first" type="search" placeholder="skladnik"> 
             </form>
-            
+
             <div class="add-making">
-                <input class="add-recipe" type="text" placeholder="opis wykonania">
+                <textarea class="add-recipe" rows='6' placeholder="opis wykonania"></textarea>
             </div>
-            
-                <div class="send-recipe">
-                    <button class="btn btn-success btn-sm btn-block"><b>Wyślij</b></button>
+
+            <div class="send-recipe">
+                <button class="btn btn-success btn-sm btn-block"><b>Wyślij</b></button>
             </div>
         </div>
 

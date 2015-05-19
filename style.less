@@ -1,9 +1,8 @@
 body {
-    margin: 0;
-    background-image: url(images/tlo.jpg);
-    background-size: cover;
+   background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: url(images/pomidor2.jpg); 
 }
 
 #container{
@@ -11,23 +10,34 @@ body {
     margin: 0;
     overflow: hidden;
     position: relative;
+    background-color: white;
 }
 
 .menu-container{
-    background-color: rgba(147, 115, 87, 1);
     position:fixed;
     width: 80%;
-    margin-left:10%;
-    margin-right:  10%;
+    margin-left:15%;
+    margin-right:  5%;
     margin-bottom: 15px;
     padding: 6px;
+    padding-left: 15px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: center;
-    z-index: 999;
-    border: solid 1px black;
-    border-top: none;
+    z-index: 0.9;
     box-shadow: 17px 14px 32px #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor.jpg);
+}
+
+.banner{
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    padding:3px;
+    text-align: center;
 }
 
 .menu{
@@ -52,13 +62,13 @@ ul.menu li{
     padding: 10px;
     margin: 7px;
     min-width: 100px;
-    background-color: rgba(255, 229, 215, 0.9);
+    background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 5px;
 }
 
 ul.menu li.menu-hover{
-    background-color: rgba(255, 229, 215, 0.9); 
+    background-color: white; 
     border: solid 1px pink;
     padding: 10px;
 }
@@ -75,6 +85,7 @@ ul.submenu li{
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
+    z-index: 1;
 }
 
 a{
@@ -89,12 +100,18 @@ a{
     }
 }
 
+.banner-p{
+    font-family: 'Times New Roman';
+    font-size: 28px;
+    color: black;
+}   
+
 .download-book{
     z-index:1;
     position: fixed;
     border: solid 1px black;
     width: 220px;
-    top: 160px;
+    top: 180px;
     padding: 0;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -106,7 +123,7 @@ a{
 
 .left-panel{
     position: fixed;
-    top: 220px;
+    top: 240px;
     min-height: 300px;
     left: -2px;
     width: 250px;
@@ -134,7 +151,7 @@ a{
     position: fixed;
     border: solid 1px black;
     width: 180px;
-    top: 200px;
+    top: 220px;
     padding: 0;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -181,30 +198,40 @@ a{
 
 .add_caption{
     position: absolute;
-    margin-top: 130px;
-    width: 70%;
-    height: 60px;
-    margin-left: 20%;
-    background-color: rgba(147, 115, 87, 1);
+    margin-top: 140px;
+    width: 60%;
+    height: 70px;
+    margin-left: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor.jpg);
     padding: 6px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: left;
-    border: solid 1px black;
+    border: solid 2px black;
     box-shadow: 17px 14px 32px #000000;
+    text-align: center;
+}
+
+.add-caption-p{
+     font-family: 'Times New Roman';
+    font-size: 25px;
+    color: black;
 }
 
 .add_container{
     position: absolute;
     margin-top: 190px;;
-    width: 70%;
-    margin-left: 20%;
-    background-color: rgba(255, 229, 215, 0.9);
+    width: 60%;
+    margin-left: 25%;
+    background-color: whitesmoke;
     padding: 6px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: left;
-    border: solid 1px black;
+    border: solid 2px black;
     box-shadow: 17px 14px 32px #000000;
 }
 
@@ -239,6 +266,10 @@ a{
     border-radius: 5px;
 }
 
+.add-making{
+    width: 100%;
+}
+
 .remove-ingredient-recipe{
     width: 30%;
     float: right;
@@ -261,8 +292,8 @@ a{
     border-radius: 5px;
 }
 .add-recipe{
-    margin: 10px;
-    width: 80%;
+    margin: 2%;
+    width: 96%;
     padding: 7px;
     box-shadow: 3px 3px 5px;
     border: solid black 1px;
@@ -277,9 +308,31 @@ a{
     border: 1px solid black;
     border-radius: 3px;
     width: 20%;
-    margin-left: 10%;
+    margin-left: 70%;
     box-shadow: 3px 3px 5px;
 }
+
+.bazylia{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 80%;
+    width: 20%;
+    z-index: 1;
+}
+
+.bazylia-img{
+    width: 100%;
+}
+
+.bazylia2{
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 1%;
+    width: 20%;
+    z-index: 1;
+}
+
+
 
 
 
