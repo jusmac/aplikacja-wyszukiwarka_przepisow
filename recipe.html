@@ -15,14 +15,6 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src='app.js'></script>
         <script>
-            $(function() {
-                $(".accordion").accordion({
-                    heightStyle: "content"
-                });
-            });
-
-        </script>
-        <script>
             $(".ingredient").autocomplete({
                 source: "skladniki.php",
                 minLength: 1
@@ -43,7 +35,7 @@
                 <li class="col-lg-2"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
                 <li class="col-lg-2"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
                 <li class="col-lg-2"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>
-                <li class="col-lg-2"><a href="#"><p class='menu-p'>↓ Link 5</p></a>
+                <li class="col-lg-2"><a href=""><p class='menu-p'>↓ Link 5</p></a>
                     <ul class="submenu">
                         <li><a href="#">Link 5.1</a></li>
                         <li><a href="#">Link 5.2</a></li>
@@ -88,52 +80,32 @@
                 </div>
         </div>
 
-
         <div class="bazylia">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
-        <div class="accordion-caption">
-            <b class='accordion-caption-p'>Ciekawe przepisy</b>
+        
+        
+        <div class='recipe-caption'>
+            <b class='recipe-caption-p'>((Przepis))</b>
         </div>
-        <div class="accordion">
-            <h3>Przepis 1</h3>
-            <div>
-                <img class='slide-img' src="images/1.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra
-                        leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+        <div class='recipe-container'>
+            <div class='recipe-making'>
+                <div class='recipe-ingredients'>
+                    ingr
+                    
+                </div>
+                <div class='recipe-how-to-do'>
+                    how to do
                 </div>
             </div>
-            <h3>Przepis 2</h3>
-            <div>
-                <img class='slide-img' src="images/2.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
-                        Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, 
-                        faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-                </div>
-            </div>
-            <h3>Przepis 3</h3>
-            <div>
-                <img class='slide-img' src="images/3.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac 
-                        tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, 
-                        quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-                </div>
-            </div>
-            <h3>Przepis 4</h3>
-            <div>
-                <img class='slide-img' src="images/4.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                        Phasellus pellentesque purus in massa. Aenean in pede. </p>
-                </div>
+            <div class='recipe-photo'>
+                <img class='recipe-img' src='' alt='img'>
             </div>
         </div>
+        
+        
         <div class="caprese">
-            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
+            <img class='caprese-img img-thumbnail' src="images/caprese.jpg" alt='caprese'/>
         </div>
     </body>
 </html>

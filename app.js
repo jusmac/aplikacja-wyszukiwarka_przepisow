@@ -91,7 +91,7 @@ var sendRecipe = function() {
         recipe = {
             description: $('.add-recipe').val(),
             ingredients: ingredients,
-            name: $('.add_recipe_name').val(),
+            name: $('.add-recipe-name').val(),
         };
         $.ajax({
             type: 'POST',
