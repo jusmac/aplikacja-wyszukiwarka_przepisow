@@ -38,9 +38,7 @@ var removeInput = function() {
 
 var addInputRecipe = function() {
     $('.add-ingredient-recipe').click(function() {
-        $('.add.first').after('<input class="add" type="text" placeholder="skladnik">');
-        $('.add-quantity.first').after('<input class="add-quantity" type="number"  min="1" placeholder="ilosc">');
-        $('.add-unit.first').after('<select class="add-unit"></select>');
+        $('.add-new-ingredient').after($('#new-ingredient').html());
         return(false);
     });
 };
@@ -106,6 +104,22 @@ var sendRecipe = function() {
     });
 };
 
+var searchAddInput = function() {
+    $('.search-add-ingredient').click(function() {
+        $('.search-ingredient.first').after('<input class="search-ingredient" type="search" placeholder="dodaj skladnik">');
+        return(false);
+    });
+};
+
+var searchRemoveInput = function() {
+    $('.search-remove-ingredient').click(function() {
+        var inputs = $('.search-ingredient');
+        if (inputs.length > 1) {
+            inputs.last().remove();
+        }
+    });
+};
+
 $(function() {
     menu();
     panel();
@@ -115,4 +129,6 @@ $(function() {
     addInputRecipe();
     removeInputRecipe();
     sendRecipe();
+    searchAddInput();
+    searchRemoveInput();
 });

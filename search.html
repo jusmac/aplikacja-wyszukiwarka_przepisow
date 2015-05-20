@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
+        <link href="style.less" rel="stylesheet">
+        <link href="slider.less" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src='app.js'></script>
+        <script>
+            $(".ingredient").autocomplete({
+                source: "skladniki.php",
+                minLength: 1
+            });
+        </script>
+
+
+    </head>
+    <body>
+        <div class="bazylia2">
+            <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
+        </div>
+        <div class="menu-container">
+            <div class='banner'>
+                <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b>
+            </div>
+            <ul class="menu">
+                <li class="col-lg-2"><a href="index.html">Strona główna</a></li>
+                <li class="col-lg-2"><a href="add.html">Dodaj przepis</a></li>
+                <li class="col-lg-2"><a href="search.html">Szukaj przepisu</a></li>
+                <li class="col-lg-2"><a href="#">↓ Link 5</a>
+                    <ul class="submenu">
+                        <li><a href="#">Link 5.1</a></li>
+                        <li><a href="#">Link 5.2</a></li>
+                    </ul>
+                </li>
+                <li class="col-lg-2"><a href="#">Link 6</a></li>
+            </ul>
+        </div>
+
+        <div class='shortcut'>
+            <b>Na skróty</b>
+            <div class="download-book">
+                <button class="btn btn-default btn-block">
+                    <b>Pobierz wszystkie przepisy</b>
+                </button>
+            </div>
+            <div class="open">
+                <button class="btn btn-default btn-block">
+                    <b>Wyszukaj przepis</b>
+                </button>
+            </div>
+        </div>
+        <div class="left-panel">
+            <div class="add-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Dodaj składnik</b>
+                </button>
+            </div>
+            <div class="remove-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Usuń składnik</b>
+                </button>
+            </div>
+            <form>
+                <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
+            </form>
+            <div class="button-search">
+                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+            </div>
+            <div class="button-close">
+                <button class="btn-xs btn-inverse">X</button>
+            </div>
+        </div>
+        <div class="bazylia">
+            <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
+        </div>
+
+        <div class='search-caption'>
+            <b class='search-caption-p'>Wyszukaj przepis</b>
+        </div>
+        <div class='search-container'>
+            <div class="search-add-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Dodaj składnik</b>
+                </button>
+            </div>
+            <div class="search-remove-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Usuń składnik</b>
+                </button>
+            </div>
+            <form>
+                <input class="search-ingredient first" type="search" placeholder="dodaj skladnik"> 
+            </form>
+            <div class="search-button-search">
+                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+            </div>
+        </div>
+
+        <div class="caprese">
+            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
+        </div>
+    </body>
+</html>

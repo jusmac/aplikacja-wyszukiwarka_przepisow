@@ -31,6 +31,26 @@
 
     </head>
     <body>
+        <script type="template/html" id="new-ingredient">
+            <form class='add-new-ingredient'>
+            <div class='col-lg-6'>
+            <input class="add" type="search" placeholder="skladnik"> 
+            </div>
+            <div class='col-lg-3'>
+            <input class='add-quantity first' type='number'  min='1' placeholder='ilosc'>
+            </div>
+            <div class='col-lg-3'>
+            <select class="add-unit first">
+            <option>gramy</option>
+            <option>szklanki</option>
+            <option>łyżeczki</option>
+            <option>dkg</option>
+            <option>litry</option>
+            <option>sztuki</option>
+            </select>
+            </div> 
+            </form>
+        </script>
         <div class="bazylia2">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
@@ -41,7 +61,7 @@
             <ul class="menu">
                 <li class="col-lg-2"><a href="index.html">Strona główna</a></li>
                 <li class="col-lg-2"><a href="add.html">Dodaj przepis</a></li>
-                <li class="col-lg-2"><a href="#">Link 4</a></li>
+                <li class="col-lg-2"><a href="search.html">Szukaj przepisu</a></li>
                 <li class="col-lg-2"><a href="#">↓ Link 5</a>
                     <ul class="submenu">
                         <li><a href="#">Link 5.1</a></li>
@@ -52,36 +72,39 @@
             </ul>
         </div>
 
-        <div class="download-book">
-            <button class="btn btn-default btn-block">
-                <b>Pobierz wszystkie przepisy</b>
-            </button>
-        </div>
-
-        <div class="left-panel">
-            <div class="add-ingredient">
-                <button class="btn btn-default btn-sm btn-block">
-                    <b>Dodaj składnik</b>
+         <div class='shortcut'>
+            <b>Na skróty</b>
+            <div class="download-book">
+                <button class="btn btn-default btn-block">
+                    <b>Pobierz wszystkie przepisy</b>
                 </button>
             </div>
-            <div class="remove-ingredient">
-                <button class="btn btn-default btn-sm btn-block">
-                    <b>Usuń składnik</b>
+            <div class="open">
+                <button class="btn btn-default btn-block">
+                    <b>Wyszukaj przepis</b>
                 </button>
             </div>
-            <form>
-                <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
-            </form>
-            <div class="button-search">
-                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
-            </div>
-            <div class="button-close">
-                <button class="btn-xs btn-inverse">X</button>
-            </div>
         </div>
-        <div class="open"><button class="btn btn-default btn-block">
-                <b>Wyszukaj przepis</b>
-            </button>
+            <div class="left-panel">
+                <div class="add-ingredient">
+                    <button class="btn btn-default btn-sm btn-block">
+                        <b>Dodaj składnik</b>
+                    </button>
+                </div>
+                <div class="remove-ingredient">
+                    <button class="btn btn-default btn-sm btn-block">
+                        <b>Usuń składnik</b>
+                    </button>
+                </div>
+                <form>
+                    <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
+                </form>
+                <div class="button-search">
+                    <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+                </div>
+                <div class="button-close">
+                    <button class="btn-xs btn-inverse">X</button>
+                </div>
         </div>
 
         <div class="bazylia">
@@ -106,7 +129,7 @@
                     <b>Usuń składnik</b>
                 </button> 
             </div>                
-            <form class='add-new-ingredient'>
+            <form class='add-new-ingredient first'>
                 <div class='col-lg-6'>
                     <input class="add first" type="search" placeholder="skladnik"> 
                 </div>
@@ -120,14 +143,19 @@
                         <option>łyżeczki</option>
                         <option>dkg</option>
                         <option>litry</option>
+                        <option>sztuki</option>
                     </select>
                 </div> 
             </form>
 
+
             <div class="add-making">
                 <textarea class="add-recipe" rows='6' placeholder="opis wykonania"></textarea>
             </div>
-
+            <div class="add-img">
+                <b>Dodaj zdjęcie</b>
+                <input type="file">
+            </div>
             <div class="send-recipe">
                 <button class="btn btn-default btn-sm btn-block"><b>Wyślij</b></button>
             </div>
