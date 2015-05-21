@@ -12,11 +12,11 @@ var menu = function() {
 var panel = function() {
     $(".open").on("click", function() {
         $(".left-panel").animate({opacity: '+=1'}, 'slow');
-        $(".open").animate({opacity: '-=1'}, 'slow');
+        $(".shortcut").animate({opacity: '-=1'}, 'slow');
     });
     $(".button-close").on("click", function() {
         $(".left-panel").animate({opacity: '-=1'}, 'slow');
-        $(".open").animate({opacity: '+=1'}, 'slow');
+        $(".shortcut").animate({opacity: '+=1'}, 'slow');
     });
 };
 
@@ -36,9 +36,22 @@ var removeInput = function() {
     });
 };
 
+var searchRecipe = function() {
+    $('.button-search').click(function() {
+        $.ajax({
+            type: 'GET',
+            url: 'recipes.php',
+            //data: ???
+            error: function(data) {
+                alert('Wystapil blad. Prosze sprobowac za chwile')
+            }
+        });
+    });
+};
+
 var addInputRecipe = function() {
     $('.add-ingredient-recipe').click(function() {
-        $('.add-new-ingredient').after($('#new-ingredient').html());
+        $('.add-new-ingredient.first').after($('#new-ingredient').html());
         return(false);
     });
 };
@@ -98,8 +111,11 @@ var sendRecipe = function() {
             url: 'new-recipe.php',
             data: recipe,
             success: function(data) {
-                console.log(data);
+                alert('Przepis zostal wyslany. Dziekuje za pomoc w tworzeniu bazy przepisow!');
             },
+            error: function(data) {
+                alert('Wystapil blad. Prosze sprobowac za chwile')
+            }
         });
     });
 };
@@ -120,15 +136,38 @@ var searchRemoveInput = function() {
     });
 };
 
+var newSlider = function() {
+    $('.cd-testimonials-wrapper').flexslider({
+        //declare the slider items
+        selector: ".cd-testimonials > li",
+        animation: "slide",
+        //do not add navigation for paging control of each slide
+        controlNav: false,
+        slideshow: false,
+        //Allow height of the slider to animate smoothly in horizontal mode
+        smoothHeight: true,
+        start: function() {
+            $('.cd-testimonials').children('li').css({
+                'opacity': 1,
+                'position': 'relative'
+            });
+        }
+    });
+};
+
+
 $(function() {
     menu();
     panel();
     addInput();
     removeInput();
+    searchRecipe();
     downloadBook();
     addInputRecipe();
     removeInputRecipe();
     sendRecipe();
     searchAddInput();
     searchRemoveInput();
+    newSlider();
+    modalPage();
 });

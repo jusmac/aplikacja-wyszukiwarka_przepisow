@@ -9,11 +9,15 @@
         <link href="add.less" rel="stylesheet">
         <link href="recipe.less" rel="stylesheet">
         <link href="slider.less" rel="stylesheet">
+        <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"></script>
         <script src='app.js'></script>
+        <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
+ 
         <script>
             $(function() {
                 $(".accordion").accordion({
@@ -21,12 +25,6 @@
                 });
             });
 
-        </script>
-        <script>
-            $(".ingredient").autocomplete({
-                source: "skladniki.php",
-                minLength: 1
-            });
         </script>
 
 
@@ -92,46 +90,77 @@
         <div class="bazylia">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
-        <div class="accordion-caption">
-            <b class='accordion-caption-p'>Ciekawe przepisy</b>
+        
+        <div class="cd-testimonial-caption">
+            <b class='cd-testimonial-caption-p'>Ciekawe przepisy</b>
         </div>
-        <div class="accordion">
-            <h3>Przepis 1</h3>
-            <div>
-                <img class='slide-img' src="images/1.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra
-                        leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                </div>
-            </div>
-            <h3>Przepis 2</h3>
-            <div>
-                <img class='slide-img' src="images/2.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
-                        Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, 
-                        faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-                </div>
-            </div>
-            <h3>Przepis 3</h3>
-            <div>
-                <img class='slide-img' src="images/3.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac 
-                        tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, 
-                        quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-                </div>
-            </div>
-            <h3>Przepis 4</h3>
-            <div>
-                <img class='slide-img' src="images/4.jpg" alt='bg'/>
-                <div class="slide-caption">
-                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                        Phasellus pellentesque purus in massa. Aenean in pede. </p>
-                </div>
-            </div>
-        </div>
+        <div class="cd-testimonials-wrapper cd-container">
+	<ul class="cd-testimonials">
+		<li>
+                    <div class="cd-caption">
+                        <h3> Przepis 1</h3>
+                        <div class="cd-caption-ingredients">
+                            fgergeh
+                            erherh
+                            ehehethj
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+			<div class="cd-img">
+				<img class="cd-img-photo" src="images/1.jpg" alt="Author image">
+			</div>
+		</li>
+                <li>
+			<div class="cd-caption">
+                            <h3> Przepis 2</h3>
+                            <div class="cd-caption-ingredients">
+                            fgergeh
+                            erherh
+                            ehehethj
+                        </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+			<div class="cd-img">
+				<img class="cd-img-photo" src="images/2.jpg" alt="Author image">
+			</div>
+		</li>
+                <li>
+			<div class="cd-caption">
+                            <h3> Przepis 3</h3>
+                            <div class="cd-caption-ingredients">
+                            fgergeh
+                            erherh
+                            ehehethj
+                        </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+			<div class="cd-img">
+				<img class="cd-img-photo" src="images/3.jpg" alt="Author image">
+			</div>
+		</li>
+                <li>
+			<div class="cd-caption">
+                            <h3> Przepis 4</h3>
+                            <div class="cd-caption-ingredients">
+                            fgergeh
+                            erherh
+                            ehehethj
+                        </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+			<div class="cd-img">
+				<img class="cd-img-photo" src="images/4.jpg" alt="Author image">
+			</div>
+		</li>
+	</ul>
+ 
+</div> <!-- cd-testimonials-wrapper -->
+
+
         <div class="caprese">
             <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
         </div>
