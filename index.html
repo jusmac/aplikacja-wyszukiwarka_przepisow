@@ -15,17 +15,18 @@
         <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
         <script src='app.js'></script>
         <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js'></script>
     </head>
 
 
     <body>
         <script  type="template/html" id="newInput">
-                    <div class="ingredientinput first"> <form>
-                    <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
-                </form>
+            <div class="ingredientinput first"> <form>
+            <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
+            </form>
             </div>
-    </script>
-        
+        </script>
+
         <div class="bazylia2">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
@@ -91,6 +92,11 @@
             <b class='cd-testimonial-caption-p'>Ciekawe przepisy</b>
         </div>
         <div class="cd-testimonials-wrapper cd-container">
+           <div class="see-all">
+            <button class="btn btn-default btn-block">
+                <b>Zobacz wszystkie</b>
+            </button>
+           </div>
             <ul class="cd-testimonials">
                 <li>
                     <div class="cd-caption">
@@ -153,7 +159,6 @@
                     </div>
                 </li>
             </ul>
-
         </div> <!-- cd-testimonials-wrapper -->
 
 

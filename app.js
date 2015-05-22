@@ -155,6 +155,12 @@ var newSlider = function() {
     });
 };
 
+var modalPage = function() {
+    $('.cd-testimonials-all-wrapper').children('ul').masonry({
+        itemSelector: '.cd-testimonials-item'
+    });
+};
+
 var inFinite = function() {
     $(document).ready(alert('Strona w trakcie realizacji, prosze o wyrozumialosc'));
 };
@@ -170,7 +176,7 @@ var downloadRecipe = function() {
     $.ajax({
         type: 'POST',
         data: recipe,
-      //  url: 
+        //  url: 
         success: function(data) {
             $('.recipe-caption').html(name);
             $('.recipe-ingredients').html(ingredients);
@@ -178,10 +184,22 @@ var downloadRecipe = function() {
             ;
         },
         error: function() {
-           alert.$('.recipe-caption').html('Przepraszamy, blad pobierania');
+            alert.$('.recipe-caption').html('Przepraszamy, blad pobierania');
         }
     });
 };
+
+var buttonToModalPage = function() {
+    $('.see-all').click(function() {
+        window.location = "modal-page.html";
+    });
+};
+var closeModalPage = function() {
+    $('.close-modal-page').click(function() {
+        window.location = "index.html";
+    });
+};
+
 
 $(function() {
     menu();
@@ -198,6 +216,8 @@ $(function() {
     newSlider();
     inFinite();
     downloadRecipe();
+    buttonToModalPage();
+    closeModalPage();
 });
 
 
