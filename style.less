@@ -39,7 +39,7 @@ body {
         margin-left:0;
         margin-right: 0;
         padding: 2px;
-        
+
     }
 }
 
@@ -48,7 +48,7 @@ body {
     height: 35px;
     margin: 0;
     padding:3px;
-    text-align: center;
+    text-align: left;
 }
 
 .menu{
@@ -72,10 +72,13 @@ ul.menu li{
     list-style: none;
     padding: 10px;
     margin: 7px;
+    margin-left: 1px;
+    margin-right: 1px;
     min-width: 12%;
-    background-color: white;
+    background-color: wheat;
     border-radius: 10px;
     box-shadow: 5px 5px 5px;
+    max-height: 40px;
 }
 
 /*œredni telefon lub IPad*/
@@ -83,14 +86,14 @@ ul.menu li{
     ul.menu li{ 
         width: 10%;
         padding: 1px;
+        padding-top:1px;
         margin: 1px;
     }
 }
 
 ul.menu li.menu-hover{
-    background-color: white; 
-    border: solid 1px pink;
-    padding: 10px;
+    background-color: white;
+    border: black 2px solid;
 }
 
 ul.menu li a{
@@ -109,8 +112,9 @@ ul.submenu li{
 }
 
 .menu-p{
-    font-family: 'Times New Roman';
-    font-size: 17px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
     color: darkblue;
     :visited{
         color: blue;
@@ -123,12 +127,13 @@ ul.submenu li{
 /*œredni telefon lub IPad*/
 @media only screen and (max-width: 760px) {
     .menu-p{ 
-        font-size: 10px;
+        font-size: 8px;
+        font-weight: none;
     }
 }
 
 .banner-p{
-    font-family: 'Times New Roman';
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 28px;
     color: black;
 } 
@@ -240,6 +245,11 @@ ul.submenu li{
     border-radius: 5px;
 }
 
+.ingredientinput{
+    width: 90%;
+    margin: 5%;
+}
+
 .input-display{
     display:none;
 }
@@ -267,7 +277,7 @@ ul.submenu li{
 /*œredni telefon lub IPad*/
 @media only screen and (max-width: 760px) {
     .bazylia2{ 
-       display:none; 
+        display:none; 
     }
 }
 
@@ -282,14 +292,78 @@ ul.submenu li{
 /*œredni telefon lub IPad*/
 @media only screen and (max-width: 760px) {
     .caprese{ 
-      margin-top: 350px;
-      width: 50%;
-        
+        margin-top: 350px;
+        width: 50%;
+
     }
 }
 
 .caprese-img{
     width: 100%;
+}
+
+
+.cd-testimonial-caption, .add-caption, .search-caption, .recipe-caption{
+    position: absolute;
+    margin-top: 140px;
+    width: 60%;
+    height: 70px;
+    margin-left: 25%;
+    border: black 2px solid;
+    border-bottom: none;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor.jpg);
+    box-shadow: 4px 4px 10px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;    
+    padding-top: 5px;
+}
+
+@media only screen and (max-width: 760px) {
+    .cd-testimonial-caption, .add-caption, .search-caption, .recipe-caption{ 
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 0;
+    }
+}
+
+.cd-testimonial-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    color: black;
+}
+
+/*œredni telefon lub IPad*/
+@media only screen and (max-width: 760px) {
+    .cd-testimonial-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p{ 
+        font-size: 12px;     
+    }
+}
+
+.cd-testimonials-wrapper, .add-container, .search-container, .recipe-container{
+    position: absolute;
+    margin-top: 190px;
+    width: 60%;
+    margin-left: 25%;
+    border: black 3px solid;
+    padding: 7px;
+    background-color: wheat;
+    box-shadow: 17px 14px 32px #000000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height: 300px;
+}
+
+@media only screen and (max-width: 760px) {
+    .cd-testimonials-wrapper, .add-container, .search-container, .recipe-container{ 
+        width: 90%;
+        margin-left: 5%;
+        min-height: 150px;
+    }
 }
 
 

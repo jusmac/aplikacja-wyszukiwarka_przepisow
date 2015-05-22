@@ -22,7 +22,7 @@ var panel = function() {
 
 var addInput = function() {
     $('.add-ingredient').click(function() {
-        $('.ingredient.first').after('<input class="ingredient" type="search" placeholder="dodaj skladnik">');
+        $('.ingredient.first').after($('#newInput').html());
         return(false);
     });
 };
@@ -155,6 +155,33 @@ var newSlider = function() {
     });
 };
 
+var inFinite = function() {
+    $(document).ready(alert('Strona w trakcie realizacji, prosze o wyrozumialosc'));
+};
+
+var downloadRecipe = function() {
+    recipe = {
+        name: 'Naleœniki',
+        ingredients: ['mleko', 'jajka', 'maka', 'sol', 'olej'],
+        description: 'Wszystkie sk³adniki po³¹czyæ, np. przy pomocy miksera do uzyskania konsystencji gêstej œmietany.\n\
+                            Rozgrzaæ patelniê, wylewaæ niewielkie porcje ciasta, rozprowadziæ na ca³ej powierzchni patelni. \n\
+                            Sma¿yæ a¿ naleœnik bêdzie odchodzi³ od patelni, przewróciæ na drug¹ stronê.'
+    };
+    $.ajax({
+        type: 'POST',
+        data: recipe,
+      //  url: 
+        success: function(data) {
+            $('.recipe-caption').html(name);
+            $('.recipe-ingredients').html(ingredients);
+            $('.recipe-how-to-do').html(description);
+            ;
+        },
+        error: function() {
+           alert.$('.recipe-caption').html('Przepraszamy, blad pobierania');
+        }
+    });
+};
 
 $(function() {
     menu();
@@ -169,5 +196,9 @@ $(function() {
     searchAddInput();
     searchRemoveInput();
     newSlider();
-    modalPage();
+    inFinite();
+    downloadRecipe();
 });
+
+
+

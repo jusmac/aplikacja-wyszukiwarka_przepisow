@@ -12,24 +12,20 @@
         <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
         <script src='app.js'></script>
         <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
- 
-        <script>
-            $(function() {
-                $(".accordion").accordion({
-                    heightStyle: "content"
-                });
-            });
-
-        </script>
-
-
     </head>
+
+
     <body>
+        <script  type="template/html" id="newInput">
+                    <div class="ingredientinput first"> <form>
+                    <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
+                </form>
+            </div>
+    </script>
+        
         <div class="bazylia2">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
@@ -47,10 +43,9 @@
                         <li><a href="#">Link 5.2</a></li>
                     </ul>
                 </li>
-                <li class="col-lg-2"><a href="#"><p class='menu-p'>Link 6</p></a></li>
             </ul>
         </div>
-        
+
         <div class='shortcut'>
             <b>Na skróty</b>
             <div class="download-book">
@@ -64,41 +59,42 @@
                 </button>
             </div>
         </div>
-            <div class="left-panel">
-                <div class="add-ingredient">
-                    <button class="btn btn-default btn-sm btn-block">
-                        <b>Dodaj składnik</b>
-                    </button>
-                </div>
-                <div class="remove-ingredient">
-                    <button class="btn btn-default btn-sm btn-block">
-                        <b>Usuń składnik</b>
-                    </button>
-                </div>
-                <form>
+        <div class="left-panel">
+            <div class="add-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Dodaj składnik</b>
+                </button>
+            </div>
+            <div class="remove-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Usuń składnik</b>
+                </button>
+            </div>
+            <div class="ingredientinput first"> <form>
                     <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
                 </form>
-                <div class="button-search">
-                    <button class="btn-ms btn-inverse">Szukaj przepisu</button>
-                </div>
-                <div class="button-close">
-                    <button class="btn-xs btn-inverse">X</button>
-                </div>
+            </div>
+            <div class="button-search">
+                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+            </div>
+            <div class="button-close">
+                <button class="btn-xs btn-inverse">X</button>
+            </div>
         </div>
 
 
         <div class="bazylia">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
-        
+
         <div class="cd-testimonial-caption">
             <b class='cd-testimonial-caption-p'>Ciekawe przepisy</b>
         </div>
         <div class="cd-testimonials-wrapper cd-container">
-	<ul class="cd-testimonials">
-		<li>
+            <ul class="cd-testimonials">
+                <li>
                     <div class="cd-caption">
-                        <h3> Przepis 1</h3>
+                        <b class="cd-caption-p"> Przepis 1</b>
                         <div class="cd-caption-ingredients">
                             fgergeh
                             erherh
@@ -107,58 +103,58 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-			<div class="cd-img">
-				<img class="cd-img-photo" src="images/1.jpg" alt="Author image">
-			</div>
-		</li>
+                    <div class="cd-img">
+                        <img class="cd-img-photo" src="images/1.jpg" alt="Author image">
+                    </div>
+                </li>
                 <li>
-			<div class="cd-caption">
-                            <h3> Przepis 2</h3>
-                            <div class="cd-caption-ingredients">
+                    <div class="cd-caption">
+                        <b class="cd-caption-p"> Przepis 2</b>
+                        <div class="cd-caption-ingredients">
                             fgergeh
                             erherh
                             ehehethj
                         </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-			<div class="cd-img">
-				<img class="cd-img-photo" src="images/2.jpg" alt="Author image">
-			</div>
-		</li>
+                    <div class="cd-img">
+                        <img class="cd-img-photo" src="images/2.jpg" alt="Author image">
+                    </div>
+                </li>
                 <li>
-			<div class="cd-caption">
-                            <h3> Przepis 3</h3>
-                            <div class="cd-caption-ingredients">
+                    <div class="cd-caption">
+                        <b class="cd-caption-p"> Przepis 3</b>
+                        <div class="cd-caption-ingredients">
                             fgergeh
                             erherh
                             ehehethj
                         </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-			<div class="cd-img">
-				<img class="cd-img-photo" src="images/3.jpg" alt="Author image">
-			</div>
-		</li>
+                    <div class="cd-img">
+                        <img class="cd-img-photo" src="images/3.jpg" alt="Author image">
+                    </div>
+                </li>
                 <li>
-			<div class="cd-caption">
-                            <h3> Przepis 4</h3>
-                            <div class="cd-caption-ingredients">
+                    <div class="cd-caption">
+                        <b class="cd-caption-p"> Przepis 4</b>
+                        <div class="cd-caption-ingredients">
                             fgergeh
                             erherh
                             ehehethj
                         </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-			<div class="cd-img">
-				<img class="cd-img-photo" src="images/4.jpg" alt="Author image">
-			</div>
-		</li>
-	</ul>
- 
-</div> <!-- cd-testimonials-wrapper -->
+                    <div class="cd-img">
+                        <img class="cd-img-photo" src="images/4.jpg" alt="Author image">
+                    </div>
+                </li>
+            </ul>
+
+        </div> <!-- cd-testimonials-wrapper -->
 
 
         <div class="caprese">

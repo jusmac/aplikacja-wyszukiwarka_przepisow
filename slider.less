@@ -1,68 +1,6 @@
 
-.cd-testimonial-caption{
-position: absolute;
-    margin-top: 140px;
-    width: 60%;
-    height: 70px;
-    margin-left: 25%;
-    border: black 2px solid;
-    border-bottom: none;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(images/pomidor.jpg);
-    box-shadow: 4px 4px 10px;
-    text-align: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;    
-}
-
-@media only screen and (max-width: 760px) {
-    .cd-testimonial-caption{ 
-        width: 90%;
-        margin-left: 5%;
-    }
-}
-
-.cd-testimonial-caption-p{
-font-family: 'Times New Roman';
-    font-size: 25px;
-    color: black;
-}
-
-/*œredni telefon lub IPad*/
-@media only screen and (max-width: 760px) {
-    .cd-testimonial-caption-p{ 
-        font-size: 12px;     
-    }
-}
-
-.cd-testimonials-wrapper{
-    position: absolute;
-    margin-top: 190px;
-    width: 60%;
-    margin-left: 25%;
-    border: black 3px solid;
-    padding: 0;
-    background-color: wheat;
-    box-shadow: 17px 14px 32px #000000;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    min-height: 300px;
-}
-
-@media only screen and (max-width: 760px) {
-    .cd-testimonials-wrapper{ 
-        width: 90%;
-        margin-left: 5%;
-        min-height: 150px;
-    }
-}
-
-
 .cd-img{
-    width: 40%;
+    width: 55%;
     float: right;
 
 }
@@ -74,7 +12,7 @@ font-family: 'Times New Roman';
 }
 
 .cd-caption{
-    width: 60%;
+    width: 45%;
     float: left;
     text-align: center;
     padding: 5px;
@@ -86,6 +24,18 @@ font-family: 'Times New Roman';
     }
 }
 
+.cd-caption-p{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    color: black;
+}
+
+@media only screen and (max-width: 760px) {
+    .cd-caption-p{ 
+        font-size: 12px;     
+    }
+}
+
 .cd-caption-ingredients{
     border-bottom: solid 1px black;
     text-align: center;
@@ -94,63 +44,90 @@ font-family: 'Times New Roman';
 
 .cd-img-photo{
     width: 70%;
-    margin: 15%;
+    margin: 5%;
+    margin-right: 10%;
     border: solid 1px black;
     box-shadow: 3px 5px 10px;
-    border-radius: 30px
+    border-radius: 30px;
+    transform: rotate(7deg) ;
+    -webkit-transform: rotate(7deg) ;
+    -moz-transform: rotate(7deg) ;
+    -o-transform: rotate(7deg) ;
+    -ms-transform: rotate(7deg) ;
 }
 
+.cd-img-photo:hover{
+    -webkit-animation: cssAnimation 1s 16 ease;  
+    -moz-animation: cssAnimation 1s 16 ease;
+    -o-animation: cssAnimation 1s 16 ease;
+    box-shadow: 22px 22px 75px #000000;
+}
+
+@-webkit-keyframes cssAnimation {
+    from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+    to { -webkit-transform: rotate(0deg) scale(1.309) skew(1deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+    from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+    to { -moz-transform: rotate(0deg) scale(1.309) skew(1deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+    from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+    to { -o-transform: rotate(0deg) scale(1.309) skew(1deg) translate(0px); }
+}
+
+
 .flex-direction-nav li {
-  position: absolute;
-  height: 100%;
-  width: 40px;
-  top: 0;
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0;
 }
- 
+
 .flex-direction-nav li:first-child {
-  left: 0;
+    left: 0;
 }
- 
+
 .flex-direction-nav li:last-child {
-  right: 0;
+    right: 0;
 }
- 
+
 .flex-direction-nav li a {
-  display: block;
-  height: 100%;
-  width: 100%;
- 
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
- 
-  transition: background-color 0.2s;
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    /* image replacement */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+
+    transition: background-color 0.2s;
 }
- 
+
 .flex-direction-nav li a::before, .flex-direction-nav li a::after {
-  /* left and right arrows in css only */
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 2px;
-  height: 13px;
-  background-color: white;
+    /* left and right arrows in css only */
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 13px;
+    background-color: white;
 }
- 
+
 .flex-direction-nav li a::before {
-  transform: translateY(-35px) rotate(45deg);
+    transform: translateY(-35px) rotate(45deg);
 }
- 
+
 .flex-direction-nav li a::after {
-  transform: translateY(-27px) rotate(-45deg);
+    transform: translateY(-27px) rotate(-45deg);
 }
- 
+
 .flex-direction-nav li:last-child a::before {
-  transform: translateY(-35px) rotate(-45deg);
+    transform: translateY(-35px) rotate(-45deg);
 }
- 
+
 .flex-direction-nav li:last-child a::after {
-  transform: translateY(-27px) rotate(45deg);
+    transform: translateY(-27px) rotate(45deg);
 }

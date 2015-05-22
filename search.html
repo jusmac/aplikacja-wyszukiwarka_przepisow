@@ -9,20 +9,15 @@
         <link href="add.less" rel="stylesheet">
         <link href="recipe.less" rel="stylesheet">
         <link href="slider.less" rel="stylesheet">
+        <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
         <script src='app.js'></script>
-        <script>
-            $(".ingredient").autocomplete({
-                source: "skladniki.php",
-                minLength: 1
-            });
-        </script>
-
-
+        <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
     </head>
+    
+    
     <body>
         <div class="bazylia2">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
@@ -32,16 +27,15 @@
                 <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b>
             </div>
             <ul class="menu">
-                <li class="col-lg-2"><a href="index.html">Strona główna</a></li>
-                <li class="col-lg-2"><a href="add.html">Dodaj przepis</a></li>
-                <li class="col-lg-2"><a href="search.html">Szukaj przepisu</a></li>
-                <li class="col-lg-2"><a href="#">↓ Link 5</a>
+                <li class="col-lg-2"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
+                <li class="col-lg-2"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
+                <li class="col-lg-2"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>
+                <li class="col-lg-2"><a href="#"><p class='menu-p'>↓ Link 5</p></a>
                     <ul class="submenu">
                         <li><a href="#">Link 5.1</a></li>
                         <li><a href="#">Link 5.2</a></li>
                     </ul>
                 </li>
-                <li class="col-lg-2"><a href="#">Link 6</a></li>
             </ul>
         </div>
 
