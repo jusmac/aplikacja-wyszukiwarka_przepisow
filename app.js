@@ -155,38 +155,31 @@ var newSlider = function() {
     });
 };
 
-var modalPage = function() {
-    $('.cd-testimonials-all-wrapper').children('ul').masonry({
-        itemSelector: '.cd-testimonials-item'
-    });
-};
-
-var inFinite = function() {
-    $(document).ready(alert('Strona w trakcie realizacji, prosze o wyrozumialosc'));
-};
 
 var downloadRecipe = function() {
     recipe = {
         name: 'Naleœniki',
-        ingredients: ['mleko', 'jajka', 'maka', 'sol', 'olej'],
+        ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
         description: 'Wszystkie sk³adniki po³¹czyæ, np. przy pomocy miksera do uzyskania konsystencji gêstej œmietany.\n\
                             Rozgrzaæ patelniê, wylewaæ niewielkie porcje ciasta, rozprowadziæ na ca³ej powierzchni patelni. \n\
                             Sma¿yæ a¿ naleœnik bêdzie odchodzi³ od patelni, przewróciæ na drug¹ stronê.'
+    };
+    var onSuccess = function(data) {
+        $('.recipe-caption').html(data.name);
+        $('.recipe-ingredients').html(data.ingredients);
+        $('.recipe-how-to-do').html(data.description);
+        ;
     };
     $.ajax({
         type: 'POST',
         data: recipe,
         //  url: 
-        success: function(data) {
-            $('.recipe-caption').html(name);
-            $('.recipe-ingredients').html(ingredients);
-            $('.recipe-how-to-do').html(description);
-            ;
-        },
+        success: onSuccess,
         error: function() {
             alert.$('.recipe-caption').html('Przepraszamy, blad pobierania');
         }
     });
+    onSuccess(recipe);
 };
 
 var buttonToModalPage = function() {
@@ -200,6 +193,25 @@ var closeModalPage = function() {
     });
 };
 
+var cdTestimonialsItemVisible = function() {
+    $(document).ready(function() {
+        $('.cd-testimonials-item').fadeIn(2000);
+    });
+};
+
+var addBorderWidthClone = function() {
+    for (i = -1; i < 3; i++) {
+        var stamp = $('.cd-bazylia.first').clone().css({left: ((i+1)*11) + '%'}).removeClass('first');
+        $('.cd-bazylia.first').after(stamp);
+    }
+};
+
+var addBorderHeightClone = function() {
+    for (i = 0; i < 2; i++) {
+        var stamp = $('.cd-bazylia2.first').clone().css({top: ((i+1)*65) + 'px'}).removeClass('first');
+        $('.cd-bazylia2.first').after(stamp);
+    }
+};
 
 $(function() {
     menu();
@@ -214,10 +226,12 @@ $(function() {
     searchAddInput();
     searchRemoveInput();
     newSlider();
-    inFinite();
     downloadRecipe();
     buttonToModalPage();
     closeModalPage();
+    cdTestimonialsItemVisible();
+    addBorderWidthClone();
+    addBorderHeightClone();
 });
 
 
