@@ -120,6 +120,58 @@ var sendRecipe = function() {
     });
 };
 
+var downloadRecipetoSlider = function() {
+    recipe = {
+        name: 'Nalesniki',
+        ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
+        description: 'Wszystkie skladniki polaczyc, np. przy pomocy miksera do uzyskania konsystencji gestej smietany.\n\
+                            Rozgrzac patelnie, wylewac niewielkie porcje ciasta, rozprowadzic na calej powierzchni patelni. \n\
+                            Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
+    };
+    var onSuccess = function(data) {
+        $('.cd-caption').html(data.name).css({fontSize: '20px'});
+        $('.cd-caption-ingredients').html(data.ingredients).css({fontSize: '15px'});
+        $('.cd-caption-description').html(data.description);
+        ;
+    };
+    $.ajax({
+        type: 'POST',
+        data: recipe,
+        //  url: 
+        success: onSuccess,
+        error: function() {
+            alert.$('.cd-caption').html('Przepraszamy, blad pobierania');
+        }
+    });
+    onSuccess(recipe);
+};
+
+var downloadRecipetoModalPage = function() {
+    recipe = {
+        name: 'Nalesniki',
+        ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
+        description: 'Wszystkie skladniki polaczyc, np. przy pomocy miksera do uzyskania konsystencji gestej smietany.\n\
+                            Rozgrzac patelnie, wylewac niewielkie porcje ciasta, rozprowadzic na calej powierzchni patelni. \n\
+                            Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
+    };
+    var onSuccess = function(data) {
+        $('.cd-testimonials-recipe-name').html(data.name).css({fontSize: '20px'});
+        $('.cd-testimonials-recipe-ingredients').html(data.ingredients).css({fontSize: '15px'});
+        $('.cd-testimonials-recipe-description').html(data.description);
+        ;
+    };
+    $.ajax({
+        type: 'POST',
+        data: recipe,
+        //  url: 
+        success: onSuccess,
+        error: function() {
+            alert.$('.cd-caption').html('Przepraszamy, blad pobierania');
+        }
+    });
+    onSuccess(recipe);
+};
+
 var searchAddInput = function() {
     $('.search-add-ingredient').click(function() {
         $('.search-ingredient.first').after('<input class="search-ingredient" type="search" placeholder="dodaj skladnik">');
@@ -200,14 +252,14 @@ var cdTestimonialsItemVisible = function() {
 };
 
 var addBorderWidthClone = function() {
-    for (i = -1; i < 3; i++) {
+    for (i = -1; i < 2; i++) {
         var stamp = $('.cd-bazylia.first').clone().css({left: ((i+1)*11) + '%'}).removeClass('first');
         $('.cd-bazylia.first').after(stamp);
     }
 };
 
 var addBorderHeightClone = function() {
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 1; i++) {
         var stamp = $('.cd-bazylia2.first').clone().css({top: ((i+1)*65) + 'px'}).removeClass('first');
         $('.cd-bazylia2.first').after(stamp);
     }
@@ -220,6 +272,8 @@ $(function() {
     removeInput();
     searchRecipe();
     downloadBook();
+    downloadRecipetoSlider();
+    downloadRecipetoModalPage();
     addInputRecipe();
     removeInputRecipe();
     sendRecipe();
