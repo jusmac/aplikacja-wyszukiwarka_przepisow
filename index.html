@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
         <link href="style.less" rel="stylesheet">
         <link href="slider.less" rel="stylesheet">
+        <link href="modal-page.less" rel="stylesheet">
         <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,7 +94,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class='registration-button btn btn-deafult'>Zarejestruj się</button>
+                        <button class='registration-button btn btn-deafult'  data-dismiss="modal">Zarejestruj się</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -145,7 +146,7 @@
         </div>
         <div class="cd-testimonials-wrapper cd-container">
             <div class="see-all">
-                <button class="btn btn-default btn-block">
+                <button class="btn btn-default btn-block" data-toggle="modal" data-target="#recipesModal">
                     <b>Zobacz wszystkie</b>
                 </button>
             </div>
@@ -221,5 +222,70 @@
         <div class="caprese">
             <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
         </div>
+
+
+        <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="cd-testimonials-all-wrapper">
+                            <div class="close-modal-page">
+                                <button class="btn btn-default btn-block" data-dismiss="modal" aria-hidden="true">
+                                    <b>Close</b>
+                                </button>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/1.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/3.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/4.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/2.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </body>
 </html>

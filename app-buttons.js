@@ -124,18 +124,6 @@ var searchRemoveInput = function() {
     });
 };
 
-var buttonToModalPage = function() {
-    $('.see-all').click(function() {
-        window.location = "modal-page.html";
-    });
-};
-
-var closeModalPage = function() {
-    $('.close-modal-page').click(function() {
-        window.location = "index.html";
-    });
-};
-
 var listClick = function() {
     $('.list-recipe-cell').click(function() {
 
@@ -181,6 +169,7 @@ var registrationButton = function(){
                 alert('Wystapil blad. Prosze sprobowac za chwile');
             }  
     });
+    
 });
 };
 
@@ -196,8 +185,6 @@ $(function() {
     sendRecipe();
     searchAddInput();
     searchRemoveInput();
-    buttonToModalPage();
-    closeModalPage();
     listClick();
     login();
     registrationButton();
