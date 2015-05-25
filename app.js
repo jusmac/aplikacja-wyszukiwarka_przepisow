@@ -210,15 +210,15 @@ var newSlider = function() {
 
 var downloadRecipe = function() {
     recipe = {
-        name: 'Naleœniki',
+        name: 'Nalesniki',
         ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
-        description: 'Wszystkie sk³adniki po³¹czyæ, np. przy pomocy miksera do uzyskania konsystencji gêstej œmietany.\n\
-                            Rozgrzaæ patelniê, wylewaæ niewielkie porcje ciasta, rozprowadziæ na ca³ej powierzchni patelni. \n\
-                            Sma¿yæ a¿ naleœnik bêdzie odchodzi³ od patelni, przewróciæ na drug¹ stronê.'
+        description: 'Wszystkie skladniki polaczyc, np. przy pomocy miksera do uzyskania konsystencji gestej smietany.\n\
+                            Rozgrzac patelnie, wylewac niewielkie porcje ciasta, rozprowadzic na calej powierzchni patelni. \n\
+                            Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
     };
     var onSuccess = function(data) {
-        $('.recipe-caption').html(data.name);
-        $('.recipe-ingredients').html(data.ingredients);
+        $('.recipe-caption').html(data.name).css({fontSize: '25px'});
+        $('.recipe-ingredients').html(data.ingredients).css({fontSize: '16px'});
         $('.recipe-how-to-do').html(data.description);
         ;
     };
@@ -265,6 +265,35 @@ var addBorderHeightClone = function() {
     }
 };
 
+var downloadList = function() {
+    recipe = {
+        name: 'Nalesniki',
+        ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
+        description: 'Wszystkie sk³adniki po³¹czyæ, np. przy pomocy miksera do uzyskania konsystencji gêstej œmietany.\n\
+                            Rozgrzaæ patelniê, wylewaæ niewielkie porcje ciasta, rozprowadziæ na ca³ej powierzchni patelni. \n\
+                            Sma¿yæ a¿ naleœnik bêdzie odchodzi³ od patelni, przewróciæ na drug¹ stronê.'
+    };
+    var onSuccess = function(data) {
+        $('.list-recipes-cell-a').html(data.name).css({fontSize: '17px'});
+    };
+    $.ajax({
+        type: 'POST',
+        data: recipe,
+        //  url: 
+        success: onSuccess,
+        error: function() {
+            alert.$('.recipe-caption').html('Przepraszamy, blad pobierania');
+        }
+    });
+    onSuccess(recipe);
+};
+
+var listClick = function(){
+    $('.list-recipe-cell').click(function(){
+        
+    });
+};
+
 $(function() {
     menu();
     panel();
@@ -286,6 +315,8 @@ $(function() {
     cdTestimonialsItemVisible();
     addBorderWidthClone();
     addBorderHeightClone();
+    downloadList();
+    listClick();
 });
 
 

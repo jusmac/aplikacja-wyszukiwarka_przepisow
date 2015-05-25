@@ -1,20 +1,21 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <title>jquery</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
         <link href="style.less" rel="stylesheet">
-        <link href="search.less" rel="stylesheet">
+        <link href="list.less" rel="stylesheet">
         <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
         <script src='app.js'></script>
         <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js'></script>
     </head>
-    
-    
+
+
     <body>
         <script  type="template/html" id="newInput">
             <div class="ingredientinput"> <form>
@@ -22,6 +23,7 @@
             </form>
             </div>
         </script>
+
         <div class="bazylia2">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
@@ -66,9 +68,10 @@
                     <b>Usuń składnik</b>
                 </button>
             </div>
-            <form>
-                <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
-            </form>
+            <div class="ingredientinput first"> <form>
+                    <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
+                </form>
+            </div>
             <div class="button-search">
                 <button class="btn-ms btn-inverse">Szukaj przepisu</button>
             </div>
@@ -76,33 +79,29 @@
                 <button class="btn-xs btn-inverse">X</button>
             </div>
         </div>
+
         <div class="bazylia">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
-
-        <div class='search-caption'>
-            <b class='search-caption-p'>Wyszukaj przepis</b>
+        
+        <div class="list-caption">
+            <b class='list-caption-p'>Wyszukane przepisy</b>
         </div>
-        <div class='search-container'>
-            <div class="search-add-ingredient">
-                <button class="btn btn-default btn-sm btn-block">
-                    <b>Dodaj składnik</b>
-                </button>
-            </div>
-            <div class="search-remove-ingredient">
-                <button class="btn btn-default btn-sm btn-block">
-                    <b>Usuń składnik</b>
-                </button>
-            </div>
-            <form>
-                <input class="search-ingredient first" type="search" placeholder="dodaj skladnik"> 
-            </form>
-            <div class="search-button-search">
-                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+        <div class='list-conatainer'>
+            <div class='list-recipes'>
+                <div class='list-recipes-cell'>
+                <a href='recipe.html' class='list-recipes-cell-a'>
+                    </a>
+                </div>
+                <div class='list-recipes-cell'>
+                <a href='recipe.html' class='list-recipes-cell-a'>
+                    </a>
+                </div>
             </div>
         </div>
+        
 
-        <div class="caprese">
+<div class="caprese">
             <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
         </div>
     </body>
