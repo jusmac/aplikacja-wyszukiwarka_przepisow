@@ -7,11 +7,12 @@
         <link href="style.less" rel="stylesheet">
         <link href="slider.less" rel="stylesheet">
         <link href="woothemes-FlexSlider-6df2881/flexslider.less" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
         <script src='app.js'></script>
         <script src='app-buttons.js'></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js'></script>
     </head>
@@ -41,7 +42,14 @@
                     <button class='btn btn-default btn-block btn-sm'>Zaloguj</button>
                 </div>
                 <div class='registration'>
-                    <p><b><small>Nie posiadasz jeszcze konta? <a href='registration.html'>Zarejestruj się</a></small></b></p>
+                    <div class='registration-question'>
+                        <p><b><small>Nie posiadasz jeszcze konta?</small></b></p>
+                    </div>
+                    <div class='registration-link'>
+                        <button class='btn btn-default btn-block btn-sm' data-toggle="modal" data-target="#myModal">
+                            <b><small>Zarejestruj się</small></b>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class='banner'>
@@ -55,6 +63,41 @@
                 </li>
             </ul>
         </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Darmowa rejestracja</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class='registrafion-data'>
+                            <form>  
+                                <div class='col-lg-12'>
+                                    <label>Login: </label> 
+                                    <input type="text" class="login-registration-input" placeholder='login'>  
+                                </div>
+                                <div class='col-lg-12'>
+                                    <label> Hasło: </label> 
+                                    <input type="password" class="password-registration-input" placeholder='haslo'> 
+                                </div>
+                                <div class='col-lg-12'>
+                                    <label>Powtórz hasło: </label>
+                                    <input type="password" class="password-registration-input" placeholder='powtorz haslo'>
+                                </div>
+                                <div class='col-lg-12'>
+                                    <label>Email: </label>
+                                    <input type='email' class='email-registration-input' placeholder='email'>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class='registration-button btn btn-deafult'>Zarejestruj się</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
         <div class='shortcut'>
             <b>Na skróty</b>

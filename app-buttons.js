@@ -136,10 +136,52 @@ var closeModalPage = function() {
     });
 };
 
-var listClick = function(){
-    $('.list-recipe-cell').click(function(){
-        
+var listClick = function() {
+    $('.list-recipe-cell').click(function() {
+
     });
+};
+
+var login = function() {
+    $(".button-login").click(function() {
+        var login = $('.login-input').val();
+        var password = $('.password-input').val();
+        var dataString = 'login=' + login + '&password=' + password;
+
+        $.ajax({
+            type: 'POST',
+            url: 'login.php',
+            data: dataString,
+            success: function(data) {
+                if (data == '0')
+                    alert('Blad logowania. Sprobuj jeszcze raz');
+                else
+                    window.location = window.location;
+            }
+        });
+    });
+};
+
+var registrationButton = function(){
+    $('.registration-button').click(function(){
+        loginData = {
+            login: $('.login-registration-input').val(),
+            password: $('.password-registration-input').val(),
+            email: $('.email-registration-input').val()
+        };
+        $.ajax({
+            type:'POST',
+            url: 'login.php',
+            data: loginData,
+           success: function(data) {
+                alert('Dziekuje za rejestracje');
+                consol.log(data);
+            },
+            error: function(data) {
+                alert('Wystapil blad. Prosze sprobowac za chwile');
+            }  
+    });
+});
 };
 
 
@@ -157,4 +199,6 @@ $(function() {
     buttonToModalPage();
     closeModalPage();
     listClick();
+    login();
+    registrationButton();
 });
