@@ -27,11 +27,12 @@
             </div>
         </script>
 
-        <div class="bazylia2">
+        <div class="bazylia2 hidden-xs hidden-sm">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
-        <div class="menu-container">
-            <div class='login-container'>
+
+        <div class="menu-container  col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
+            <div class='login-container hidden-xs hidden-sm'>
                 <div class='login'>
                     <form>  
                         <input type="text" class="login-input" placeholder='login'>  
@@ -39,6 +40,7 @@
 
                     </form>  
                 </div>
+
                 <div class='button-login'>
                     <button class='btn btn-default btn-block btn-sm'>Zaloguj</button>
                 </div>
@@ -52,16 +54,17 @@
                         </button>
                     </div>
                 </div>
+            </div>                
+            <div class="login-container-small hidden-lg hidden-md">
+                Zaloguj sie
             </div>
             <div class='banner'>
                 <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b>
             </div>
             <ul class="menu">
-                <li class="col-lg-2"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
-                <li class="col-lg-2"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
-                <li class="col-lg-2"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>
-                <li class="col-lg-2"><a href="#"><p class='menu-p'>↓ Link 5</p></a>
-                </li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>    
             </ul>
         </div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -100,7 +103,7 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <div class='shortcut'>
+        <div class='shortcut hidden-xs hidden-sm'>
             <b>Na skróty</b>
             <div class="download-book">
                 <button class="btn btn-default btn-block">
@@ -113,7 +116,7 @@
                 </button>
             </div>
         </div>
-        <div class="left-panel">
+        <div class="left-panel hidden-xs hidden-sm">
             <div class="add-ingredient">
                 <button class="btn btn-default btn-sm btn-block">
                     <b>Dodaj składnik</b>
@@ -135,94 +138,79 @@
                 <button class="btn-xs btn-inverse">X</button>
             </div>
         </div>
-
-
-        <div class="bazylia">
+        <div class="bazylia hidden-sm hidden-xs">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
+        <div class="caprese">
+            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
+        </div>
 
-        <div class="cd-testimonial-caption">
-            <b class='cd-testimonial-caption-p'>Ciekawe przepisy</b>
+
+
+        <div class="cd-testimonials-caption">
+            <b class='cd-testimonials-caption-p'>Ciekawe przepisy</b>
         </div>
         <div class="cd-testimonials-wrapper cd-container">
-            <div class="see-all">
+            <div class="see-all hidden-sm hidden-xs">
                 <button class="btn btn-default btn-block" data-toggle="modal" data-target="#recipesModal">
                     <b>Zobacz wszystkie</b>
                 </button>
             </div>
             <ul class="cd-testimonials">
                 <li>
-                    <div class="cd-slide">
+                    <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
                         <div class="cd-caption">
-                            <b class="cd-caption-p"></b> 
                         </div>
                         <div class="cd-caption-ingredients">
                         </div>
                         <div class="cd-caption-description">
                         </div>
-
-
                     </div>        
-                    <div class="cd-img">
-                        <img class="cd-img-photo" src="images/2.jpg" alt="Author image">
-                    </div>
-                </li>
-                <li>
-                    <div class="cd-slide">
-                        <div class="cd-caption">
-                            <b class="cd-caption-p"></b> 
-                        </div>
-                        <div class="cd-caption-ingredients">
-                        </div>
-                        <div class="cd-caption-description">
-                        </div>
-
-
-                    </div>        
-                    <div class="cd-img">
-                        <img class="cd-img-photo" src="images/3.jpg" alt="Author image">
-                    </div>
-                </li>
-                <li>
-                    <div class="cd-slide">
-                        <div class="cd-caption">
-                            <b class="cd-caption-p"></b> 
-                        </div>
-                        <div class="cd-caption-ingredients">
-                        </div>
-                        <div class="cd-caption-description">
-                        </div>
-
-
-                    </div>        
-                    <div class="cd-img">
+                    <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
                         <img class="cd-img-photo" src="images/1.jpg" alt="Author image">
                     </div>
                 </li>
                 <li>
-                    <div class="cd-slide">
+                    <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
                         <div class="cd-caption">
-                            <b class="cd-caption-p"></b> 
                         </div>
                         <div class="cd-caption-ingredients">
                         </div>
                         <div class="cd-caption-description">
                         </div>
-
-
                     </div>        
-                    <div class="cd-img">
+                    <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
+                        <img class="cd-img-photo" src="images/2.jpg" alt="Author image">
+                    </div>
+                </li>
+                <li>
+                    <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                        <div class="cd-caption">
+                        </div>
+                        <div class="cd-caption-ingredients">
+                        </div>
+                        <div class="cd-caption-description">
+                        </div>
+                    </div>        
+                    <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
+                        <img class="cd-img-photo" src="images/3.jpg" alt="Author image">
+                    </div>
+                </li>
+                <li>
+                    <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                        <div class="cd-caption">
+                        </div>
+                        <div class="cd-caption-ingredients">
+                        </div>
+                        <div class="cd-caption-description">
+                        </div>
+                    </div>        
+                    <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
                         <img class="cd-img-photo" src="images/4.jpg" alt="Author image">
                     </div>
                 </li>
             </ul>
         </div> <!-- cd-testimonials-wrapper -->
-
-
-        <div class="caprese">
-            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
-        </div>
-
 
         <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">

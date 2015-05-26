@@ -45,11 +45,12 @@
             </div> 
             </form>
         </script>
-        <div class="bazylia2">
+        <div class="bazylia2 hidden-xs hidden-sm">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
-        <div class="menu-container">
-            <div class='login-container'>
+
+        <div class="menu-container  col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
+            <div class='login-container hidden-xs hidden-sm'>
                 <div class='login'>
                     <form>  
                         <input type="text" class="login-input" placeholder='login'>  
@@ -57,6 +58,7 @@
 
                     </form>  
                 </div>
+
                 <div class='button-login'>
                     <button class='btn btn-default btn-block btn-sm'>Zaloguj</button>
                 </div>
@@ -70,19 +72,19 @@
                         </button>
                     </div>
                 </div>
+            </div>                
+            <div class="login-container-small hidden-lg hidden-md">
+                Zaloguj sie
             </div>
             <div class='banner'>
                 <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b>
             </div>
             <ul class="menu">
-                <li class="col-lg-2"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
-                <li class="col-lg-2"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
-                <li class="col-lg-2"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>
-                <li class="col-lg-2"><a href="#"><p class='menu-p'>↓ Link 5</p></a>
-                </li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="index.html"><p class='menu-p'> Strona główna</p></a></li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="add.html"><p class='menu-p'>Dodaj przepis</p></a></li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="search.html"><p class='menu-p'>Szukaj przepisu</p></a></li>    
             </ul>
         </div>
-        
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -113,13 +115,13 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class='registration-button btn btn-deafult'>Zarejestruj się</button>
+                        <button class='registration-button btn btn-deafult'  data-dismiss="modal">Zarejestruj się</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-         <div class='shortcut'>
+        <div class='shortcut hidden-xs hidden-sm'>
             <b>Na skróty</b>
             <div class="download-book">
                 <button class="btn btn-default btn-block">
@@ -132,31 +134,35 @@
                 </button>
             </div>
         </div>
-            <div class="left-panel">
-                <div class="add-ingredient">
-                    <button class="btn btn-default btn-sm btn-block">
-                        <b>Dodaj składnik</b>
-                    </button>
-                </div>
-                <div class="remove-ingredient">
-                    <button class="btn btn-default btn-sm btn-block">
-                        <b>Usuń składnik</b>
-                    </button>
-                </div>
-                <form>
+        <div class="left-panel hidden-xs hidden-sm">
+            <div class="add-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Dodaj składnik</b>
+                </button>
+            </div>
+            <div class="remove-ingredient">
+                <button class="btn btn-default btn-sm btn-block">
+                    <b>Usuń składnik</b>
+                </button>
+            </div>
+            <div class="ingredientinput first"> <form>
                     <input class="ingredient first" type="search" placeholder="dodaj skladnik"> 
                 </form>
-                <div class="button-search">
-                    <button class="btn-ms btn-inverse">Szukaj przepisu</button>
-                </div>
-                <div class="button-close">
-                    <button class="btn-xs btn-inverse">X</button>
-                </div>
+            </div>
+            <div class="button-search">
+                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+            </div>
+            <div class="button-close">
+                <button class="btn-xs btn-inverse">X</button>
+            </div>
         </div>
-
-        <div class="bazylia">
+        <div class="bazylia hidden-sm hidden-xs">
             <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
         </div>
+        <div class="caprese">
+            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
+        </div>
+
 
         <div class="add-caption">
             <b class='add-caption-p'>
@@ -164,7 +170,8 @@
             </b>   
         </div>
         <div class="add-container">      
-            <div class="add-name"><input class="add-recipe-name" type="text" placeholder="nazwa"> 
+            <div class="add-name">
+                <input class="add-recipe-name" type="text" placeholder="nazwa"> 
             </div>
             <div class="add-ingredient-recipe">
                 <button class="btn btn-default btn-sm btn-block">
@@ -177,13 +184,13 @@
                 </button> 
             </div>                
             <form class='add-new-ingredient first'>
-                <div class='col-lg-6'>
+                <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
                     <input class="add first" type="search" placeholder="skladnik"> 
                 </div>
-                <div class='col-lg-3'>
+                <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
                     <input class='add-quantity first' type='number'  min='1' placeholder='ilosc'>
                 </div>
-                <div class='col-lg-3'>
+                <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
                     <select class="add-unit first">
                         <option>gramy</option>
                         <option>szklanki</option>
@@ -194,23 +201,18 @@
                     </select>
                 </div> 
             </form>
-
-
             <div class="add-making">
                 <textarea class="add-recipe" rows='6' placeholder="opis wykonania"></textarea>
             </div>
-            <div class="add-img">
+            <div class="add-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <b>Dodaj zdjęcie</b>
                 <input type="file">
             </div>
-            <div class="send-recipe">
+            <div class="send-recipe col-lg-2 col-offset-lg-4 col-md-2 col-md-offset-4 col-sm-12 col-xs-12">
                 <button class="btn btn-default btn-sm btn-block"><b>Wyślij</b></button>
             </div>
         </div>
-        <div class="caprese">
-            <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
-        </div>
-
+  
 
     </body>
 </html>

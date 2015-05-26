@@ -18,9 +18,9 @@ var downloadRecipetoSlider = function() {
                             Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
     };
     var onSuccess = function(data) {
-        $('.cd-caption').html(data.name).css({fontSize: '20px'});
-        $('.cd-caption-ingredients').html(data.ingredients).css({fontSize: '15px'});
-        $('.cd-caption-description').html(data.description);
+        $('.cd-caption').html(data.name).addClass('cd-caption-p');
+        $('.cd-caption-ingredients').html(data.ingredients).addClass('cd-caption-ingredients-p');
+        $('.cd-caption-description').html(data.description).addClass('cd-caption-description-p');
         ;
     };
     $.ajax({
@@ -89,9 +89,9 @@ var downloadRecipe = function() {
                             Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
     };
     var onSuccess = function(data) {
-        $('.recipe-caption').html(data.name).css({fontSize: '25px'});
-        $('.recipe-ingredients').html(data.ingredients).css({fontSize: '16px'});
-        $('.recipe-how-to-do').html(data.description);
+        $('.recipe-caption').html(data.name).addClass('recipe-caption-p');
+        $('.recipe-ingredients').html(data.ingredients).addClass('recipe-ingredients-p');
+        $('.recipe-how-to-do').html(data.description).addClass('recipe-how-to-do-p');
         ;
     };
     $.ajax({

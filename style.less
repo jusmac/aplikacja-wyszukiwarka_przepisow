@@ -1,28 +1,16 @@
-body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: white; 
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
 }
 
-#container{
-    left: 0;
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: white;
-}
+
 
 .menu-container{
     position:fixed;
-    width: 80%;
-    margin-left:15%;
-    margin-right:  5%;
     margin-bottom: 15px;
     padding: 6px;
     padding-left: 15px;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     text-align: center;
     z-index: 1;
     box-shadow: 17px 14px 32px #000000;
@@ -32,16 +20,6 @@ body {
     background-image: url(images/pomidor.jpg);
 }
 
-/*œredni telefon lub IPad*/
-@media only screen and (max-width: 760px) {
-    .menu-container{ 
-        width:100%;
-        margin-left:0;
-        margin-right: 0;
-        padding: 2px;
-
-    }
-}
 
 .banner{
     width: 70%;
@@ -114,9 +92,6 @@ ul.submenu li{
 }
 
 .menu-p{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    font-weight: bold;
     color: darkblue;
     :visited{
         color: blue;
@@ -126,17 +101,22 @@ ul.submenu li{
     }
 }
 
-/*œredni telefon lub IPad*/
 @media only screen and (max-width: 760px) {
     .menu-p{ 
-        font-size: 8px;
-        font-weight: none;
+        font-size: 10px;
+
     }
 }
 
-.login-container{
+.login-container, .login-container-small{
     width: 30%;
     float: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor2.jpg);  
+    padding:3px;
+    border-radius: 5px;
 }
 
 .login{
@@ -214,7 +194,7 @@ ul.submenu li{
 /*œredni telefon lub IPad*/
 @media only screen and (max-width: 760px) {
     .banner-p{ 
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -243,12 +223,6 @@ ul.submenu li{
     text-align: center;
     box-shadow: 3px 3px 3px;
     background-color: wheat;
-}
-/*œredni telefon lub IPad*/
-@media only screen and (max-width: 760px) {
-    .shortcut{ 
-        display: none;
-    }
 }
 
 .download-book{
@@ -341,7 +315,7 @@ ul.submenu li{
 
 .bazylia{
     position: fixed;
-    margin-top: 90px;
+    margin-top: 110px;
     margin-left: 82%;
     width: 20%;
     z-index: 9999;
@@ -388,12 +362,12 @@ ul.submenu li{
 }
 
 
-.cd-testimonial-caption, .add-caption, .search-caption, .recipe-caption, .list-caption{
+.cd-testimonials-caption, .add-caption, .search-caption, .recipe-caption, .list-caption{
     position: absolute;
-    margin-top: 140px;
-    width: 60%;
+    margin-top: 170px;
+    width: 65%;
     height: 70px;
-    margin-left: 25%;
+    margin-left: 20%;
     border: black 2px solid;
     border-bottom: none;
     padding: 0;
@@ -408,42 +382,40 @@ ul.submenu li{
     padding-top: 5px;
 }
 
-@media only screen and (max-width: 760px) {
-    .cd-testimonial-caption, .add-caption, .search-caption, .recipe-caption, .list-caption{ 
+@media only screen and (max-width: 800px) {
+    .cd-testimonials-caption, .add-caption, .search-caption, .recipe-caption, .list-caption{ 
         width: 90%;
         margin-left: 5%;
-        padding-top: 0;
+        padding-top: 5px;
     }
 }
 
-.cd-testimonial-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+.cd-testimonials-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p{
     font-size: 25px;
     color: black;
 }
 
 /*œredni telefon lub IPad*/
-@media only screen and (max-width: 760px) {
-    .cd-testimonial-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p{ 
-        font-size: 12px;     
+@media only screen and (max-width: 800px) {
+    .cd-testimonials-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p{ 
+        font-size: 14px;     
     }
 }
 
 .cd-testimonials-wrapper, .add-container, .search-container, .recipe-container, .list-conatainer{
     position: absolute;
-    margin-top: 190px;
-    width: 60%;
-    margin-left: 25%;
+    margin-top: 220px;
+    width: 65%;
+    margin-left: 20%;
     border: black 3px solid;
     padding: 7px;
     background-color: wheat;
     box-shadow: 17px 14px 32px #000000;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    min-height: 300px;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .cd-testimonials-wrapper, .add-container, .search-container, .recipe-container, .list-conatainer{ 
         width: 90%;
         margin-left: 5%;
