@@ -149,6 +149,19 @@ var downloadList = function() {
     onSuccess(recipe);
 };
 
+var fullPageScript = function(){
+    $(document).ready(function() {
+    $('.fullpage').fullpage({
+        css3: true,
+        scrollingSpeed: 1200,
+        autoScrolling: true,
+        fitToSection: true,
+        easing: 'easeIn',
+        anchors:['#index', '#add', '#search']
+    });
+});
+};
+
 $(function() {
     menu();
     downloadRecipetoSlider();
@@ -159,6 +172,7 @@ $(function() {
     addBorderWidthClone();
     addBorderHeightClone();
     downloadList();
+    fullPageScript();
 });
 
 
