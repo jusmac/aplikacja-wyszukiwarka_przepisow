@@ -145,6 +145,7 @@ var login = function() {
                     alert('Blad logowania. Sprobuj jeszcze raz');
                 else
                     window.location = window.location;
+                alert('Witaj');
             }
         });
     });
@@ -169,8 +170,13 @@ var registrationButton = function(){
                 alert('Wystapil blad. Prosze sprobowac za chwile');
             }  
     });
-    
 });
+};
+
+var loginButton = function(){
+    $('.login-container-small').click(function(){
+        window.location= 'login.html';
+    });
 };
 
 
@@ -188,4 +194,5 @@ $(function() {
     listClick();
     login();
     registrationButton();
+    loginButton();
 });
