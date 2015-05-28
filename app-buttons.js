@@ -1,11 +1,11 @@
 var panel = function() {
     $(".open").on("click", function() {
-        $(".left-panel").animate({opacity: '+=1'}, 'slow');
-        $(".shortcut").animate({opacity: '-=1'}, 'slow');
+        $(".left-panel").animate({"left": "0px"}, "slow");
+        $(".shortcut").animate({"left": "-220px"}, "slow");
     });
     $(".button-close").on("click", function() {
-        $(".left-panel").animate({opacity: '-=1'}, 'slow');
-        $(".shortcut").animate({opacity: '+=1'}, 'slow');
+        $(".left-panel").animate({"left": "-260px"}, "slow");
+        $(".shortcut").animate({"left": "0px"}, "slow");
     });
 };
 
@@ -98,9 +98,7 @@ var sendRecipe = function() {
             type: 'POST',
             url: 'new-recipe.php',
             data: recipe,
-            success: function(data) {
-                alert('Przepis zostal wyslany. Dziekuje za pomoc w tworzeniu bazy przepisow!');
-            },
+
             error: function(data) {
                 alert('Wystapil blad. Prosze sprobowac za chwile')
             }
@@ -139,14 +137,7 @@ var login = function() {
         $.ajax({
             type: 'POST',
             url: 'login.php',
-            data: dataString,
-            success: function(data) {
-                if (data == '0')
-                    alert('Blad logowania. Sprobuj jeszcze raz');
-                else
-                    window.location = window.location;
-                alert('Witaj');
-            }
+            data: dataString
         });
     });
 };
@@ -162,10 +153,6 @@ var registrationButton = function(){
             type:'POST',
             url: 'login.php',
             data: loginData,
-           success: function(data) {
-                alert('Dziekuje za rejestracje');
-                consol.log(data);
-            },
             error: function(data) {
                 alert('Wystapil blad. Prosze sprobowac za chwile');
             }  
