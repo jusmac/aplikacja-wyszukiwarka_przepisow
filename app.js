@@ -114,14 +114,14 @@ var cdTestimonialsItemVisible = function() {
 
 var addBorderWidthClone = function() {
     for (i = -1; i < 2; i++) {
-        var stamp = $('.cd-bazylia.first').clone().css({left: ((i+1)*11) + '%'}).removeClass('first');
+        var stamp = $('.cd-bazylia.first').clone().css({left: ((i + 1) * 11) + '%'}).removeClass('first');
         $('.cd-bazylia.first').after(stamp);
     }
 };
 
 var addBorderHeightClone = function() {
     for (i = 0; i < 1; i++) {
-        var stamp = $('.cd-bazylia2.first').clone().css({top: ((i+1)*65) + 'px'}).removeClass('first');
+        var stamp = $('.cd-bazylia2.first').clone().css({top: ((i + 1) * 65) + 'px'}).removeClass('first');
         $('.cd-bazylia2.first').after(stamp);
     }
 };
@@ -149,17 +149,8 @@ var downloadList = function() {
     onSuccess(recipe);
 };
 
-var fullPageScript = function(){
-    $(document).ready(function() {
-    $('.fullpage').fullpage({
-        css3: true,
-        scrollingSpeed: 1200,
-        autoScrolling: true,
-        fitToSection: true,
-        easing: 'easeIn',
-        anchors:['#index', '#add', '#search']
-    });
-});
+var sliderSlice = function() {
+    $('#sb-slider').slicebox();
 };
 
 $(function() {
@@ -172,7 +163,6 @@ $(function() {
     addBorderWidthClone();
     addBorderHeightClone();
     downloadList();
-    fullPageScript();
 });
 
 
