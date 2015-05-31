@@ -1,20 +1,13 @@
-body{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-}
-
-
-
 .menu-container{
     position:fixed;
     margin-bottom: 15px;
     width: 85%;
     margin-left: 15%;
-    padding: 6px;
+    padding: 2px;
     padding-left: 15px;
     border-bottom-left-radius: 20px;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 17px 14px 32px #000000;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +25,7 @@ body{
 
 .banner{
     width: 70%;
-    height: 35px;
+    height: 30px;
     margin: 0;
     padding:3px;
     text-align: left;
@@ -56,18 +49,21 @@ ul.menu ul{
 
 ul.menu li{
     float:left;
-    padding: 5 px;
+    padding: 2 px;
     position: relative;
     list-style: none;
-    padding: 10px;
-    margin: 7px;
+    margin-bottom: 3px;
+    margin-top: 14px;
     margin-left: 1px;
     margin-right: 1px;
     min-width: 23%;
-    background-color: wheat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor2.jpg);
     border-radius: 10px;
     box-shadow: 5px 5px 5px;
-    max-height: 40px;
+    max-height: 32px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -80,8 +76,10 @@ ul.menu li{
 }
 
 ul.menu li.menu-hover{
-    background-color: white;
-    border: black 2px solid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/pomidor.jpg);
 }
 
 ul.menu li a{
@@ -97,23 +95,6 @@ ul.submenu li{
     padding-bottom: 3px;
     text-align: center;
     z-index: 1;
-}
-
-.menu-p{
-    color: darkblue;
-    :visited{
-        color: blue;
-    }
-    :hover{
-        font-style: italic;
-    }
-}
-
-@media only screen and (max-width: 760px) {
-    .menu-p{ 
-        font-size: 10px;
-
-    }
 }
 
 .login-container, .login-container-small{
@@ -138,7 +119,7 @@ ul.submenu li{
     border: black solid 1px; 
     margin-bottom: 5px;
     border-radius: 5px;
-    padding: 2px;
+    padding: 0;
     padding-left: 10px;
     box-shadow: 2px 2px 2px;
     float: right;
@@ -150,7 +131,7 @@ ul.submenu li{
     margin-bottom: 5px;
     border: black solid 1px; 
     border-radius: 5px;
-    padding: 2px;
+    padding: 0;
     padding-left: 10px;
     box-shadow: 2px 2px 2px;
     float: left;
@@ -160,7 +141,7 @@ ul.submenu li{
 .button-login{
     border: solid 1px black;
     padding: 0;
-    margin: 5px;
+    margin: 1px;
     padding-top:0;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -175,7 +156,7 @@ ul.submenu li{
 }
 
 .registration-question{
-    padding: 3px;
+    padding: 1px;
     padding-bottom: 0;
     float: left;
     width: 60%;
@@ -190,20 +171,6 @@ ul.submenu li{
     padding-bottom: 0;
     float: right;
     width: 40%;
-}
-
-
-.banner-p{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 28px;
-    color: black;
-} 
-
-/*œredni telefon lub IPad*/
-@media only screen and (max-width: 760px) {
-    .banner-p{ 
-        font-size: 11px;
-    }
 }
 
 .registration-form{
@@ -321,13 +288,6 @@ ul.submenu li{
     display:none;
 }
 
-.bazylia{
-    position: fixed;
-    margin-top: 110px;
-    margin-left: 82%;
-    width: 20%;
-    z-index: 9999;
-}
 
 .bazylia-img{
     width: 100%;
@@ -352,8 +312,8 @@ ul.submenu li{
     position:fixed;
     z-index: -1;
     margin-top: 400px;
-    margin-left: 0;
-    width: 400px;
+    margin-left: 70%;
+    width: 30%;
 } 
 
 /*œredni telefon lub IPad*/
@@ -372,22 +332,16 @@ ul.submenu li{
 
 .cd-testimonials-caption, .add-caption, .search-caption, .recipe-caption, .list-caption, .login-caption{
     position: absolute;
-    margin-top: 170px;
-    width: 65%;
-    height: 70px;
-    margin-left: 20%;
-    border: black 2px solid;
+    margin-top: 130px;
+    width: 100%;
+    height: 50px;
     border-bottom: none;
     padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(images/pomidor.jpg);
-    box-shadow: 4px 4px 10px;
-    text-align: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;    
+    text-align: center;  
     padding-top: 5px;
+    padding-right: 10%;
+    padding-left: 20%;
+    z-index:1;
 }
 
 @media only screen and (max-width: 800px) {
@@ -398,38 +352,15 @@ ul.submenu li{
     }
 }
 
-.cd-testimonials-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p, .login-caption-p{
-    font-size: 25px;
-    font-weight: bold;
-}
-
-/*œredni telefon lub IPad*/
-@media only screen and (max-width: 800px) {
-    .cd-testimonials-caption-p, .add-caption-p, .search-caption-p, .recipe-caption-p, .list-caption-p, .login-caption-p{ 
-        font-size: 14px;     
-    }
-}
-
-.cd-testimonials-wrapper, .add-container, .search-container, .recipe-container, .list-conatainer, .main-login-container, .wrapper{
+.accordion-wrapper, .cd-testimonials-wrapper, .add-container, .search-container, .recipe-container, .list-conatainer, .main-login-container, .wrapper{
     position: absolute;
-    margin-top: 220px;
-    width: 65%;
+    margin-top: 170px;
+    width: 100%;
     height: auto;
-    margin-left: 20%;
-    border: black 3px solid;
     padding: 7px;
-    background-color: wheat;
-    box-shadow: 17px 14px 32px #000000;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-@media only screen and (max-width: 800px) {
-    .cd-testimonials-wrapper, .add-container, .search-container, .recipe-container, .list-conatainer, .main-login-container{ 
-        width: 90%;
-        margin-left: 5%;
-        padding-top: 5px;
-    }
+    padding-left: 30%;
+    padding-right: 20%;
+    z-index: 1;
 }
 
 .login-registration-input, .password-registration-input, .email-registration-input{
@@ -444,30 +375,61 @@ ul.submenu li{
     width: 50%;  
 }
 
-.fullpage{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-bottom: 500px;
-}
-
 #index{
     top: 0;
+    position: absolute;
+    width: 100%;
+    mix-height: 50px;
 }
 
 #add{
-    top: 800px;   
+    top: 800px; 
+    position: absolute;
+    width: 100%;
 }
 
 #search{
     top: 1500px;
+    position: absolute;
+    width: 100%;
 }
 
 .search-container{
     margin-bottom: 400px;
 }
 
+.onepage-inside{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top:0;
+}
 
+.onepage-inside-background{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top:0;
+    background-color: wheat;
+    z-index:0;
+    opacity: 0.6;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    padding: 6px;
+    padding-left: 15px;
+    text-align: center;
+    z-index: 2;
+    background-color: navajowhite;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+    text-align: left;
+}
 
 
 

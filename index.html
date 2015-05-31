@@ -4,40 +4,38 @@
         <title>jquery</title>
         <meta charset="UTF-8">
         <link href="style.less" rel="stylesheet">
+        <link href="fonts.less" rel="stylesheet">
         <link href="slider.less" rel="stylesheet">
         <link href="modal-page.less" rel="stylesheet">
         <link href="search.less" rel="stylesheet">
         <link href="add.less" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="accordion.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-        <script src='https://cdnjs.com/libraries/fullpage.js'></script>
         <script src='app.js'></script>
         <script src='app-buttons.js'></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src='woothemes-FlexSlider-6df2881/jquery.flexslider.js'></script>
-         <link href="Slicebox/css/jquery.slicebox.css" rel="stylesheet">
-        <script src='Slicebox/js/jquery.slicebox.js'></script>
-        
+        <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
     </head>
 
 
     <body>
         <script  type="template/html" id="newInput">
             <div class="ingredientinput"> 
-                <form>
-                    <input class="ingredient" type="search" placeholder="dodaj skladnik"> 
-                </form>
+            <form>
+            <input class="ingredient" type="search" placeholder="dodaj skladnik"> 
+            </form>
             </div>
         </script>
         <script  type="template/html" id="modalNewInput">
             <div class="modal-ingredientinput"> 
-                <form>
-                    <input class="modal-ingredient" type="search" placeholder="dodaj skladnik"> 
-                </form>
+            <form>
+            <input class="modal-ingredient" type="search" placeholder="dodaj skladnik"> 
+            </form>
             </div>
         </script>
-        
+
         <div class="bazylia2 hidden-xs hidden-sm">
             <img class='bazylia-img' src="images/bazylia2.gif" alt='bazylia'/>
         </div>
@@ -156,7 +154,7 @@
                 </button>
             </div>
             <div class="open">
-               <button class='btn btn-default btn-block'>
+                <button class='btn btn-default btn-block'>
                     <b>Wyszukaj przepis</b>
                 </button>
             </div>
@@ -183,241 +181,260 @@
                 <button class="btn-xs btn-inverse">X</button>
             </div>
         </div>
-            
-            <div class="bazylia hidden-sm hidden-xs">
-                <img class='bazylia-img' src="images/bazylia.gif" alt='bazylia'/>
-            </div>
-            <div class="caprese">
-                <img class='caprese-img' src="images/caprese.jpg" alt='caprese'/>
-            </div>
-            <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="cd-testimonials-all-wrapper">
-                                <div class="close-modal-page">
-                                    <button class="btn btn-default btn-block" data-dismiss="modal" aria-hidden="true">
-                                        <b>Close</b>
-                                    </button>
-                                </div>
-                                <div class="cd-testimonials-item-wrapper">
-                                    <div class='cd-testimonials-item'>
-                                        <div class="cd-testimonials-image">
-                                            <img class='cd-testimonials-image-photo' src="images/1.jpg" alt="image">
-                                            <div class="cd-testimonials-recipe">
-                                                <div class="cd-testimonials-recipe-name"></div>
-                                                <div class="cd-testimonials-recipe-ingredients"></div>
-                                                <div class="cd-testimonials-recipe-description"></div>
-                                            </div>
+
+
+        <div class="caprese">
+            <img class='caprese-img' src="slices/slice_0_3.png" alt='caprese'/>
+        </div>
+
+        <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="cd-testimonials-all-wrapper">
+                            <div class="close-modal-page">
+                                <button class="btn btn-default btn-block" data-dismiss="modal" aria-hidden="true">
+                                    <b>Close</b>
+                                </button>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/1.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cd-testimonials-item-wrapper">
-                                    <div class='cd-testimonials-item'>
-                                        <div class="cd-testimonials-image">
-                                            <img class='cd-testimonials-image-photo' src="images/3.jpg" alt="image">
-                                            <div class="cd-testimonials-recipe">
-                                                <div class="cd-testimonials-recipe-name"></div>
-                                                <div class="cd-testimonials-recipe-ingredients"></div>
-                                                <div class="cd-testimonials-recipe-description"></div>
-                                            </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/3.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cd-testimonials-item-wrapper">
-                                    <div class='cd-testimonials-item'>
-                                        <div class="cd-testimonials-image">
-                                            <img class='cd-testimonials-image-photo' src="images/4.jpg" alt="image">
-                                            <div class="cd-testimonials-recipe">
-                                                <div class="cd-testimonials-recipe-name"></div>
-                                                <div class="cd-testimonials-recipe-ingredients"></div>
-                                                <div class="cd-testimonials-recipe-description"></div>
-                                            </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/4.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cd-testimonials-item-wrapper">
-                                    <div class='cd-testimonials-item'>
-                                        <div class="cd-testimonials-image">
-                                            <img class='cd-testimonials-image-photo' src="images/2.jpg" alt="image">
-                                            <div class="cd-testimonials-recipe">
-                                                <div class="cd-testimonials-recipe-name"></div>
-                                                <div class="cd-testimonials-recipe-ingredients"></div>
-                                                <div class="cd-testimonials-recipe-description"></div>
-                                            </div>
+                            </div>
+                            <div class="cd-testimonials-item-wrapper">
+                                <div class='cd-testimonials-item'>
+                                    <div class="cd-testimonials-image">
+                                        <img class='cd-testimonials-image-photo' src="images/2.jpg" alt="image">
+                                        <div class="cd-testimonials-recipe">
+                                            <div class="cd-testimonials-recipe-name"></div>
+                                            <div class="cd-testimonials-recipe-ingredients"></div>
+                                            <div class="cd-testimonials-recipe-description"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
-
-            <div class='fullpage'>
-                <div class="section col-lg-12 col-md-12 col-sm-12 col-xs-12" id='index'>
-                    <div class="cd-testimonials-caption">
-                        <b class='cd-testimonials-caption-p'>Ciekawe przepisy</b>
                     </div>
-                    <div class="cd-testimonials-wrapper cd-container">
-                        <div class="see-all hidden-sm hidden-xs">
-                            <button class="btn btn-default btn-block" data-toggle="modal" data-target="#recipesModal">
-                                <b>Zobacz wszystkie</b>
-                            </button>
-                        </div>
-                        <ul class="cd-testimonials">
-                            <li>
-                                <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                                    <div class="cd-caption">
-                                    </div>
-                                    <div class="cd-caption-ingredients">
-                                    </div>
-                                    <div class="cd-caption-description">
-                                    </div>
-                                </div>        
-                                <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
-                                    <img class="cd-img-photo" src="images/1.jpg" alt="Author image">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                                    <div class="cd-caption">
-                                    </div>
-                                    <div class="cd-caption-ingredients">
-                                    </div>
-                                    <div class="cd-caption-description">
-                                    </div>
-                                </div>        
-                                <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
-                                    <img class="cd-img-photo" src="images/2.jpg" alt="Author image">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                                    <div class="cd-caption">
-                                    </div>
-                                    <div class="cd-caption-ingredients">
-                                    </div>
-                                    <div class="cd-caption-description">
-                                    </div>
-                                </div>        
-                                <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
-                                    <img class="cd-img-photo" src="images/3.jpg" alt="Author image">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cd-slide col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                                    <div class="cd-caption">
-                                    </div>
-                                    <div class="cd-caption-ingredients">
-                                    </div>
-                                    <div class="cd-caption-description">
-                                    </div>
-                                </div>        
-                                <div class="cd-img hidden-sm hidden-xs col-lg-12 col-md-12">
-                                    <img class="cd-img-photo" src="images/4.jpg" alt="Author image">
-                                </div>
-                            </li>
-                        </ul>
-                    </div> <!-- cd-testimonials-wrapper -->
-                    
-                            
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
-                <div class='section  col-lg-12 col-md-12 col-sm-12 col-xs-12' id='add'>
-                    <div class="add-caption">
-                        <b class='add-caption-p'>
-                            Dodaj przepis
-                        </b>   
+        <div class="onepage" id='index'>
+            <div class="onepage-inside">
+                <div class="cd-testimonials-caption">
+                   
+                    <div class="see-all hidden-sm hidden-xs">
+                        <button class="btn btn-default btn-block" data-toggle="modal" data-target="#recipesModal">
+                            <b>Zobacz wszystkie</b>
+                        </button>
+                    </div> 
+                    <b class='cd-testimonials-caption-p'>Ciekawe przepisy</b>
+                </div>
+                <div class="accordion-wrapper">
+                    <ul class="accordion" id="accordion">
+                        <li class="bg1">
+                            <div class="heading">
+                                <div class="cd-caption">
+                                </div>
+                            </div>
+                            <div class="bgDescription"></div>
+                            <div class="description">
+                                <div class="cd-caption">
+                                </div>
+                                <div class="cd-caption-ingredients">
+                                </div>
+                                <div class="cd-caption-description">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bg2">
+                            <div class="heading">
+                                <div class="cd-caption">
+                                </div>
+                            </div>
+                            <div class="bgDescription"></div>
+                            <div class="description">
+                                <div class="cd-caption">
+                                </div>
+                                <div class="cd-caption-ingredients">
+                                </div>
+                                <div class="cd-caption-description">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bg3">
+                            <div class="heading">
+                                <div class="cd-caption">
+                                </div>
+                            </div>
+                            <div class="bgDescription"></div>
+                            <div class="description">
+                                <div class="cd-caption">
+                                </div>
+                                <div class="cd-caption-ingredients">
+                                </div>
+                                <div class="cd-caption-description">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bg4 bleft">
+                            <div class="heading">
+                                <div class="cd-caption">
+                                </div>
+                            </div>
+                            <div class="bgDescription"></div>
+                            <div class="description">
+                                <div class="cd-caption">
+                                </div>
+                                <div class="cd-caption-ingredients">
+                                </div>
+                                <div class="cd-caption-description">
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="onepage-inside-background">
+            </div>
+        </div> 
+
+
+        <div class='onepage' id='add'>
+            <div class="add-caption">
+                <b class='add-caption-p'>
+                    Dodaj przepis
+                </b>   
+            </div>
+            <div class="add-container">  
+                <div class="add-name">
+                    <input class="add-recipe-name" type="text" placeholder="nazwa"> 
+                </div>
+                <div class="add-ingredient-recipe">
+                    <button class="btn btn-default btn-sm btn-block">
+                        <b>Dodaj składnik</b>
+                    </button>
+                </div>
+                <div class="remove-ingredient-recipe">
+                    <button class="btn btn-default btn-sm btn-block">
+                        <b>Usuń składnik</b>
+                    </button> 
+                </div>                
+                <form class='add-new-ingredient first'>
+                    <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+                        <input class="add first" type="search" placeholder="skladnik"> 
                     </div>
-                    <div class="add-container">      
-                        <div class="add-name">
-                            <input class="add-recipe-name" type="text" placeholder="nazwa"> 
-                        </div>
-                        <div class="add-ingredient-recipe">
-                            <button class="btn btn-default btn-sm btn-block">
-                                <b>Dodaj składnik</b>
-                            </button>
-                        </div>
-                        <div class="remove-ingredient-recipe">
-                            <button class="btn btn-default btn-sm btn-block">
-                                <b>Usuń składnik</b>
-                            </button> 
-                        </div>                
-                        <form class='add-new-ingredient first'>
-                            <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
-                                <input class="add first" type="search" placeholder="skladnik"> 
-                            </div>
-                            <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-                                <input class='add-quantity first' type='number'  min='1' placeholder='ilosc'>
-                            </div>
-                            <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-                                <select class="add-unit first">
-                                    <option>gramy</option>
-                                    <option>szklanki</option>
-                                    <option>łyżeczki</option>
-                                    <option>dkg</option>
-                                    <option>litry</option>
-                                    <option>sztuki</option>
-                                </select>
-                            </div> 
-                        </form>
-                        <div class="add-making">
-                            <textarea class="add-recipe" rows='6' placeholder="opis wykonania"></textarea>
-                        </div>
-                        <div class="add-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <b>Dodaj zdjęcie</b>
-                            <input type="file">
-                        </div>
-                        <div class="send-recipe col-lg-2 col-offset-lg-4 col-md-2 col-md-offset-4 col-sm-12 col-xs-12">
-                            <button class='btn btn-default btn-block' data-toggle="modal" data-target="#recipeModal">
-                                <b>Wyślij</b>
-                            </button>
-                        </div>
+                    <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
+                        <input class='add-quantity first' type='number'  min='1' placeholder='ilosc'>
+                    </div>
+                    <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
+                        <select class="add-unit first">
+                            <option>gramy</option>
+                            <option>szklanki</option>
+                            <option>łyżeczki</option>
+                            <option>dkg</option>
+                            <option>litry</option>
+                            <option>sztuki</option>
+                        </select>
+                    </div> 
+                </form>
+                <div class="add-making">
+                    <textarea class="add-recipe" rows='6' placeholder="opis wykonania"></textarea>
+                </div>
+                <div class="add-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <b>Dodaj zdjęcie</b>
+                    <input type="file">
+                </div>
+                <div class="send-recipe col-lg-2 col-offset-lg-4 col-md-2 col-md-offset-4 col-sm-12 col-xs-12">
+                    <button class='btn btn-default btn-block' data-toggle="modal" data-target="#recipeModal">
+                        <b>Wyślij</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class='onepage' id='search'>
+            <div class="onepage-inside">
+                <div class='search-caption'>
+                    <b class='search-caption-p'>Wyszukaj przepis</b>
+                </div>
+                <div class='search-container'>
+                    <div class="search-add-ingredient">
+                        <button class="btn btn-default btn-sm btn-block">
+                            <b>Dodaj składnik</b>
+                        </button>
+                    </div>
+                    <div class="search-remove-ingredient">
+                        <button class="btn btn-default btn-sm btn-block">
+                            <b>Usuń składnik</b>
+                        </button>
+                    </div>
+                    <form>
+                        <input class="search-ingredient first" type="search" placeholder="dodaj skladnik"> 
+                    </form>
+                    <div class="search-button-search">
+                        <button class="btn-ms btn-inverse">Szukaj przepisu</button>
                     </div>
                 </div>
-
-                <div class='section  col-lg-12 col-md-12 col-sm-12 col-xs-12' id='search'>
-                    <div class='search-caption'>
-                        <b class='search-caption-p'>Wyszukaj przepis</b>
-                    </div>
-                    <div class='search-container'>
-                        <div class="search-add-ingredient">
-                            <button class="btn btn-default btn-sm btn-block">
-                                <b>Dodaj składnik</b>
-                            </button>
-                        </div>
-                        <div class="search-remove-ingredient">
-                            <button class="btn btn-default btn-sm btn-block">
-                                <b>Usuń składnik</b>
-                            </button>
-                        </div>
-                        <form>
-                            <input class="search-ingredient first" type="search" placeholder="dodaj skladnik"> 
-                        </form>
-                        <div class="search-button-search">
-                            <button class="btn-ms btn-inverse">Szukaj przepisu</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                Przepis został wysłany. Dziękuję za pomoc w tworzeniu bazy przepisów.
-                            </div> 
-                            <div class="modal-footer">
-                                <button class='registration-button btn btn-deafult'  data-dismiss="modal">Zamknij</button>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dia -->
-                </div>
-
-
-                
-
             </div>
+            <div class="onepage-inside-background">
+            </div>
+        </div>
+
+        <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Przepis został wysłany. Dziękuję za pomoc w tworzeniu bazy przepisów.
+                    </div> 
+                    <div class="modal-footer">
+                        <button class='registration-button btn btn-deafult'  data-dismiss="modal">Zamknij</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dia -->
+        </div>
+
+        <div class="footer">
+            <div class="col-lg-6 col-md-6 col-sm-hidden col-xs-hidden">
+                <i class="fa fa-envelope"></i> <small>justyna.machalica@gmail.com</small>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-hidden col-xs-hidden">
+            </div>
+        </div>
+
     </body>
 
 </html>
