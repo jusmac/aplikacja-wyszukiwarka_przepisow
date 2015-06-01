@@ -57,26 +57,27 @@ ul.accordion li{
 
 @media only screen and (max-width: 760px) {
     ul.accordion li{ 
-         width:30px;
+        width:30px;
         height: 300px;
     }
 }
-ul.accordion li.bg1{
+.bg1{
     background-image:url(images/1.jpg);
 }
-ul.accordion li.bg2{
+
+.bg2{
     background-image:url(images/2.jpg);
 }
-ul.accordion li.bg3{
+.bg3{
     background-image:url(images/3.jpg);
 }
-ul.accordion li.bg4{
+.bg4{
     background-image:url(images/4.jpg);
 }
-ul.accordion li.bg5{
+.bg5{
     background-image:url(images/5.jpg);
 }
-ul.accordion li.bg6{
+.bg6{
     background-image:url(images/6.jpg);
 }
 ul.accordion li.bleft{
@@ -98,12 +99,19 @@ ul.accordion li .heading{
 }
 ul.accordion li .description{
     position:absolute;
-    width:290px;
+    width:390px;
+    margin:5px;
     height:175px;
     bottom:0px;
     left:10px;
     display:none;
     text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    ul.accordion li .description{
+        width: 100px;
+    }
 }
 
 ul.accordion li .description h2{
@@ -121,7 +129,7 @@ ul.accordion li .description p{
     line-height:14px;
     margin:10px 22px;
     font-family: "Trebuchet MS", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-style: italic;
     font-weight: normal;
     text-transform: none;
@@ -145,7 +153,7 @@ ul.accordion li .description a:hover{
 
 ul.accordion li .bgDescription{
     background:transparent url(images/bgDescription.png) repeat-x top left;
-    height:200px;
+    height:340px;
     position:absolute;
     bottom:0px;
     left:0px;

@@ -35,32 +35,6 @@ var downloadRecipetoSlider = function() {
     onSuccess(recipe);
 };
 
-var downloadRecipetoModalPage = function() {
-    recipe = {
-        name: 'Nalesniki',
-        ingredients: ['mleko ', 'jajka ', 'maka ', 'sol ', 'olej '],
-        description: 'Wszystkie skladniki polaczyc, np. przy pomocy miksera do uzyskania konsystencji gestej smietany.\n\
-                            Rozgrzac patelnie, wylewac niewielkie porcje ciasta, rozprowadzic na calej powierzchni patelni. \n\
-                            Smazyc az nalesnik bedzie odchodzil od patelni, przewrocic na druga strone.'
-    };
-    var onSuccess = function(data) {
-        $('.cd-testimonials-recipe-name').html(data.name).css({fontSize: '20px'});
-        $('.cd-testimonials-recipe-ingredients').html(data.ingredients).css({fontSize: '15px'});
-        $('.cd-testimonials-recipe-description').html(data.description);
-        ;
-    };
-    $.ajax({
-        type: 'POST',
-        data: recipe,
-        //  url: 
-        success: onSuccess,
-        error: function() {
-            alert.$('.cd-caption').html('Przepraszamy, blad pobierania');
-        }
-    });
-    onSuccess(recipe);
-};
-
 
 var downloadRecipe = function() {
     recipe = {
@@ -135,14 +109,14 @@ var accordion = function() {
     $('#accordion > li').hover(
             function() {
                 var $this = $(this);
-                $this.stop().animate({'width': '300px'}, 500);
+                $this.stop().animate({'width': '400px'}, 500);
                 $('.heading', $this).stop(true, true).fadeOut();
                 $('.bgDescription', $this).stop(true, true).slideDown(500);
                 $('.description', $this).stop(true, true).fadeIn();
             },
             function() {
                 var $this = $(this);
-                $this.stop().animate({'width': '115px'}, 1000);
+                $this.stop().animate({'width': '100px'}, 1000);
                 $('.heading', $this).stop(true, true).fadeIn();
                 $('.description', $this).stop(true, true).fadeOut(500);
                 $('.bgDescription', $this).stop(true, true).slideUp(700);
@@ -150,16 +124,36 @@ var accordion = function() {
     );
 };
 
+var accordionSmall = function() {
+    $('#accordion-small > li').hover(
+            function() {
+                var $this = $(this);
+                $this.stop().animate({'width': '150px'}, 500);
+                $('.heading', $this).stop(true, true).fadeOut();
+                $('.bgDescription', $this).stop(true, true).slideDown(500);
+                $('.description', $this).stop(true, true).fadeIn();
+            },
+            function() {
+                var $this = $(this);
+                $this.stop().animate({'width': '50px'}, 1000);
+                $('.heading', $this).stop(true, true).fadeIn();
+                $('.description', $this).stop(true, true).fadeOut(500);
+                $('.bgDescription', $this).stop(true, true).slideUp(700);
+            }
+    );
+};
+
+
 $(function() {
     menu();
     downloadRecipetoSlider();
-    downloadRecipetoModalPage();
     downloadRecipe();
     cdTestimonialsItemVisible();
     addBorderWidthClone();
     addBorderHeightClone();
     downloadList();
     accordion();
+    accordionSmall();
 });
 
 

@@ -179,12 +179,12 @@ var contactForm = function() {
             success: function() {
                 $('.info').addClass("info-ok").html('Mail zostal wyslany');
                 $('.contact-form').addClass('display');
-                $('.modal-footer').addClass('display');
+                $('.submit-button-contact').addClass('display');
             },
             error: function() {
                 $('.info').addClass("info-error").html("Przepraszamy, wyst¹pi³ b³¹d. Spróbuj ponownie za chwilê");
                 $('.contact-form').addClass('display');
-                $('.modal-footer').addClass('display');
+                $('.submit-button-contact').addClass('display');
             },
             complete: function() {
                 $('.info').show();
