@@ -11,10 +11,11 @@
         <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.css">
         <link rel="stylesheet" href="accordion.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>        
+        <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
         <script src='app.js'></script>
         <script src='app-buttons.js'></script>
-        <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
 
 
     </head>
@@ -60,8 +61,8 @@
                         <p><b><small>Nie posiadasz jeszcze konta?</small></b></p>
                     </div>
                     <div class='registration-link'>
-                        <button class='btn btn-default btn-block btn-sm' data-toggle="modal" data-target="#myModal">
-                            <b><small>Zarejestruj się</small></b>
+                        <button class='btn btn-default btn-block btn-sm' data-toggle="modal" data-target="#registrationModal">
+                            <b>Zarejestruj się</b>
                         </button>
                     </div>
                 </div>
@@ -75,13 +76,20 @@
                 <b class='banner-p'>Pomidor i bazylia czyli wyszukiwarka przepisów</b>
             </div>
             <ul class="menu">
-                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="#index"><p class='menu-p'> Strona główna</p></a></li>
-                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="#add"><p class='menu-p'>Dodaj przepis</p></a></li>
-                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a href="#search"><p class='menu-p'>Szukaj przepisu</p></a></li>    
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <a href="#index"><p class='menu-p'> Strona główna</p></a>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <a href="#add"><p class='menu-p'>Dodaj przepis</p></a>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <a href="#search"><p class='menu-p'>Szukaj przepisu</p></a>
+                </li>    
             </ul>
         </div>
 
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
+             aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -94,7 +102,7 @@
             </div><!-- /.modal-dia -->
         </div>
 
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -133,7 +141,8 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
+             aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -175,10 +184,10 @@
                 </form>
             </div>
             <div class="button-search">
-                <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+                <button class="btn-ms btn-deafult">Szukaj przepisu</button>
             </div>
             <div class="button-close">
-                <button class="btn-xs btn-inverse">X</button>
+                <button class="btn-xs btn-deafult">X</button>
             </div>
         </div>
 
@@ -187,7 +196,8 @@
             <img class='caprese-img' src="slices/slice_0_3.png" alt='caprese'/>
         </div>
 
-        <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="recipesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
+             aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -254,7 +264,7 @@
         <div class="onepage" id='index'>
             <div class="onepage-inside">
                 <div class="cd-testimonials-caption">
-                   
+
                     <div class="see-all hidden-sm hidden-xs">
                         <button class="btn btn-default btn-block" data-toggle="modal" data-target="#recipesModal">
                             <b>Zobacz wszystkie</b>
@@ -379,7 +389,7 @@
                     <input type="file">
                 </div>
                 <div class="send-recipe col-lg-2 col-offset-lg-4 col-md-2 col-md-offset-4 col-sm-12 col-xs-12">
-                    <button class='btn btn-default btn-block' data-toggle="modal" data-target="#recipeModal">
+                    <button class='btn btn-deafault btn-block' data-toggle="modal" data-target="#recipeModal">
                         <b>Wyślij</b>
                     </button>
                 </div>
@@ -406,7 +416,7 @@
                         <input class="search-ingredient first" type="search" placeholder="dodaj skladnik"> 
                     </form>
                     <div class="search-button-search">
-                        <button class="btn-ms btn-inverse">Szukaj przepisu</button>
+                        <button class="btn-ms btn-deafult">Szukaj przepisu</button>
                     </div>
                 </div>
             </div>
@@ -414,7 +424,8 @@
             </div>
         </div>
 
-        <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
+             aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -429,11 +440,48 @@
 
         <div class="footer">
             <div class="col-lg-6 col-md-6 col-sm-hidden col-xs-hidden">
-                <i class="fa fa-envelope"></i> <small>justyna.machalica@gmail.com</small>
+                <i class="fa fa-envelope"></i>
+                <button class='btn btn-default btn-block btn-sm' data-toggle="modal" 
+                                data-target="#contactModal">
+                            <b>justyna.machalica@gmail.com</b>
+                        </button>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-hidden col-xs-hidden">
             </div>
         </div>
+        
+                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class='contact-data'>
+                            <form>  
+                                <div class='col-lg-12'>
+                                    <label class="col-lg-4">Temat: </label> 
+                                    <input type="text" class="theme-contact-input col-lg-7" placeholder='Temat'>  
+                                </div>
+                                <div class="col-lg-12"> 
+                                    <label class="col-lg-4">Treść wiadomości</label>
+                                    <textarea class="content-contact-input col-lg-7" rows="4" placeholder="Treść wiadomości"></textarea>
+                                </div>
+                                <div class='col-lg-12'>
+                                    <label class="col-lg-4">Email: </label>
+                                    <input type='email' class='email-contact-input col-lg-7' placeholder='email'>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">   
+                        <button class='btn btn-default btn-block btn-sm' data-dismiss="modal">
+                            <b>Wyślij maila</b>
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
     </body>
 
