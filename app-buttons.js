@@ -74,7 +74,7 @@ var downloadBook = function() {
                 console.log(data);
             },
             error: function(data) {
-                alert('B³¹d')
+                alert('B³¹d');
             }
         });
     });
@@ -92,15 +92,14 @@ var sendRecipe = function() {
         recipe = {
             description: $('.add-recipe').val(),
             ingredients: ingredients,
-            name: $('.add-recipe-name').val(),
+            name: $('.add-recipe-name').val()
         };
         $.ajax({
             type: 'POST',
             url: 'new-recipe.php',
             data: recipe,
-
             error: function(data) {
-                alert('Wystapil blad. Prosze sprobowac za chwile')
+                alert('Wystapil blad. Prosze sprobowac za chwile');
             }
         });
     });
@@ -142,27 +141,55 @@ var login = function() {
     });
 };
 
-var registrationButton = function(){
-    $('.registration-button').click(function(){
+var registrationButton = function() {
+    $('.registration-button').click(function() {
         loginData = {
             login: $('.login-registration-input').val(),
             password: $('.password-registration-input').val(),
             email: $('.email-registration-input').val()
         };
         $.ajax({
-            type:'POST',
+            type: 'POST',
             url: 'login.php',
             data: loginData,
             error: function(data) {
                 alert('Wystapil blad. Prosze sprobowac za chwile');
-            }  
+            }
+        });
     });
-});
 };
 
-var loginButton = function(){
-    $('.login-container-small').click(function(){
-        window.location= 'login.html';
+var loginButton = function() {
+    $('.login-container-small').click(function() {
+        window.location = 'login.html';
+    });
+};
+
+var contactForm = function() {
+    $(".contact-submit").click(function() {
+        contactData = {
+            theme: $('.theme-contact-input').val(),
+            content: $('.content-contact-input').val(),
+            email: $('.email-contact-input').val()
+        };
+        $.ajax({
+            url: "contact.php",
+            type: "POST",
+            data: contactData,
+            success: function() {
+                $('.info').addClass("info-ok").html('Mail zostal wyslany');
+                $('.contact-form').addClass('display');
+                $('.modal-footer').addClass('display');
+            },
+            error: function() {
+                $('.info').addClass("info-error").html("Przepraszamy, wyst¹pi³ b³¹d. Spróbuj ponownie za chwilê");
+                $('.contact-form').addClass('display');
+                $('.modal-footer').addClass('display');
+            },
+            complete: function() {
+                $('.info').show();
+            }
+        });
     });
 };
 
@@ -182,4 +209,5 @@ $(function() {
     login();
     registrationButton();
     loginButton();
+    contactForm();
 });
